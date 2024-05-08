@@ -1,3 +1,6 @@
+/**
+ * Данные приходящие с сервиса АПИ после действия пользователя в системе
+ */
 export interface ParameterUserEventInterface {
 	vk_access_token_settings: string;
 	
@@ -25,5 +28,5 @@ export interface ParameterUserEventInterface {
 	
 	userAgent: string;
 	
-	date: string;
+	date: number;
 }
