@@ -1,0 +1,1 @@
+[![Publish Package to npmjs](https://github.com/quick6response/number_api_event/actions/workflows/publish.yml/badge.svg)](https://github.com/quick6response/number_api_event/actions/workflows/publish.yml)
