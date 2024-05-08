@@ -1,2 +1,2 @@
-export * from './paratemeter.user.type';
-export * from './rabbitmq.number.api.service.type'
+export * from './parameter.request.vk.type';
+export * from './rabbitmq.number.api.service.type';
