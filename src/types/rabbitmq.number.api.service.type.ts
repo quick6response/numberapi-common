@@ -19,7 +19,7 @@ export type RabbitmqNotificationKeyType = {
 	 * Создание комментария
 	 */
 	comment_create: ParameterUserEventInterface &
-		Required<Pick<CommentResponseDto, 'text' | 'number' | 'isAnon'>> & {
+		Required<Pick<any, 'text' | 'number' | 'isAnon'>> & {
 		commentId: number;
 	};
 	
@@ -46,7 +46,7 @@ export type RabbitmqNotificationKeyType = {
 	/**
 	 * Создание нового оператора
 	 */
-	operator_create_auto: OperatorCreateDto;
+	operator_create_auto: any;
 	
 	/**
 	 * Поиск номера человека пользователя
@@ -61,13 +61,13 @@ export type RabbitmqNotificationKeyType = {
 	/**
 	 * Добавление организации
 	 */
-	organization_create_system: OrganizationCreateRabbitType;
+	organization_create_system: any;
 	/**
 	 * Обновление организации
 	 */
 	organization_update_system: {
-		new: OrganizationCreateRabbitType;
-		old: OrganizationCreateRabbitType;
+		new: any;
+		old: any;
 	};
 	/**
 	 * Добавление организации
@@ -86,7 +86,7 @@ export type RabbitmqNotificationKeyType = {
 	 */
 	number_organization_pin: {
 		number: string;
-		organization: OrganizationCreateRabbitType;
+		organization: any;
 	};
 	/**
    /**
@@ -110,8 +110,8 @@ export type RabbitmqNotificationKeyType = {
 			userId: number;
 			text: string;
 			isAnon: boolean;
-			status: CommentStatusEnum;
-			prevStatus: CommentStatusEnum;
+			status: any;
+			prevStatus: any;
 			createdAt: Date;
 			updatedAt: Date;
 			userVkId: number;
@@ -153,7 +153,7 @@ export type RabbitmqNotificationKeyType = {
 		// информация о пользователя полученная из ВК
 		userVkInfo: { lastName: string; firstName: string; id: number };
 		// информация в системе о созданном пользователе
-		userInfo: { donut: boolean; id: number; role: UserRoleEnum };
+		userInfo: { donut: boolean; id: number; role: any };
 		reason: string;
 	};
 	
@@ -161,8 +161,8 @@ export type RabbitmqNotificationKeyType = {
 	 * Изменение пользователя
 	 */
 	user_edit: {
-		preValue: UserDto;
-		nextValue: UserDto;
+		preValue: any;
+		nextValue: any;
 		
 		reason?: string;
 	};

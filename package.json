@@ -2,14 +2,16 @@
   "name": "@quick_response/number_api_event",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["typescript", "rabbitmq", "types"],
+  "author": "quick_response",
   "license": "ISC",
+  "types": "dist/index.d.ts",
+  "files": ["dist/**/*"],
   "devDependencies": {
     "@types/node": "^20.12.11",
     "eslint": "^9.2.0",
