@@ -1,0 +1,169 @@
+import {ParameterUserEventInterface} from "./paratemeter.user.type";
+
+export type RabbitmqNotificationKeyType = {
+	/**
+	 * Логин пользователя
+	 */
+	auth_login_user: ParameterUserEventInterface & { userId: number };
+	/**
+	 * Регистрация
+	 */
+	auth_register_user: ParameterUserEventInterface & { userId: number };
+	
+	/**
+	 * Удаление комментария
+	 */
+	comment_delete: ParameterUserEventInterface & { commentId: number; number: string };
+	
+	/**
+	 * Создание комментария
+	 */
+	comment_create: ParameterUserEventInterface &
+		Required<Pick<CommentResponseDto, 'text' | 'number' | 'isAnon'>> & {
+		commentId: number;
+	};
+	
+	/**
+	 * поиск номера
+	 */
+	number_find: ParameterUserEventInterface & {
+		number: string;
+		numberId: number;
+		isNewNumber: boolean;
+		isUpdate?: boolean;
+	};
+	/**
+	 * Ошибка поиск номера.
+	 * TODO: Добавить передачу текста ошибки
+	 */
+	number_find_error: ParameterUserEventInterface & {
+		error: unknown;
+		number: string;
+		isNewNumber?: boolean;
+		isUpdate?: boolean;
+	};
+	
+	/**
+	 * Создание нового оператора
+	 */
+	operator_create_auto: OperatorCreateDto;
+	
+	/**
+	 * Поиск номера человека пользователя
+	 */
+	users_number_get: ParameterUserEventInterface & {
+		number: string;
+		isAnon: boolean;
+		isBlock: boolean;
+		userId: number;
+	};
+	
+	/**
+	 * Добавление организации
+	 */
+	organization_create_system: OrganizationCreateRabbitType;
+	/**
+	 * Обновление организации
+	 */
+	organization_update_system: {
+		new: OrganizationCreateRabbitType;
+		old: OrganizationCreateRabbitType;
+	};
+	/**
+	 * Добавление организации
+	 */
+	organization_create_error_system: {
+		message: string | unknown;
+	};
+	/**
+	 * Обновление организации
+	 */
+	organization_update_error_system: {
+		message: string | unknown;
+	};
+	/**
+	 * Прикрепление организации к номеру
+	 */
+	number_organization_pin: {
+		number: string;
+		organization: OrganizationCreateRabbitType;
+	};
+	/**
+   /**
+   * Запуск апи
+	 */
+	service_api_start: { date: string };
+	/**
+	 * Остановка сервера
+	 */
+	service_api_stop: { date: string; signal: string };
+	
+	/**
+	 * Модерация комментария
+	 */
+	comment_moderation_number: {
+		// информация о том кто выполнил действие
+		infoUserAction: ParameterUserEventInterface;
+		// комментарий
+		comment: {
+			commentId: number;
+			userId: number;
+			text: string;
+			isAnon: boolean;
+			status: CommentStatusEnum;
+			prevStatus: CommentStatusEnum;
+			createdAt: Date;
+			updatedAt: Date;
+			userVkId: number;
+		};
+	};
+	
+	/**
+	 * Уведомление об успешном Оформление подписки
+	 */
+	donut_subscriptionIssuance: {
+		userId: number;
+		userVkId: number;
+		// был ли пользователь в системе
+		isUser: boolean;
+		// дата начала подписки
+		startDate?: number;
+		// дата окончания подписки
+		endDate?: number;
+		// сумма подписки
+		amount?: number;
+		// цена подписки за месяц
+		price?: number;
+	};
+	
+	/**
+	 * Уведомление об успешном Продление подписки
+	 */
+	donut_subscriptionProlonged: { userId: number; userVkId: number };
+	
+	/**
+	 * Уведомление о выключение подписки
+	 */
+	donut_subscriptionExpired: { userId: number; userVkId: number };
+	
+	/**
+	 * Создание пользователя в системе автоматически
+	 */
+	user_create: {
+		// информация о пользователя полученная из ВК
+		userVkInfo: { lastName: string; firstName: string; id: number };
+		// информация в системе о созданном пользователе
+		userInfo: { donut: boolean; id: number; role: UserRoleEnum };
+		reason: string;
+	};
+	
+	/**
+	 * Изменение пользователя
+	 */
+	user_edit: {
+		preValue: UserDto;
+		nextValue: UserDto;
+		
+		reason?: string;
+	};
+};
