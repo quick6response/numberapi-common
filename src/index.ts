@@ -1,1 +1,1 @@
-export * from './types';
+export * from './microservice/notification';
