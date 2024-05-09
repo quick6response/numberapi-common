@@ -1,31 +1,13 @@
-export enum UserRoleEnum {
-  User = 'user',
-  Admin = 'admin',
-  Donut = 'donut',
-  Helper = 'helper',
-}
+import { UserVk, User } from '@share/types';
 
-export interface UserDtoInterface {
-  id: number;
-  idVk: number;
-  lastName: string;
-  firstName: string;
-  donut: boolean;
-  admin: boolean;
-  numberUserId: number;
-  role: UserRoleEnum;
-}
+export interface UserDtoInterface extends User {}
 
 // информация о пользователя полученная из ВК
-export interface UserVkDtoInterface {
-  lastName: string;
-  firstName: string;
-  id: number;
-}
+export interface UserVkDtoInterface extends UserVk {}
 
 export interface UserCreateDtoInterface {
   // информация о пользователя полученная из ВК
-  userVkInfo: UserVkDtoInterface;
+  userInfoVk: UserVkDtoInterface;
   // информация в системе о созданном пользователе
   userInfo: UserDtoInterface;
   reason: string;

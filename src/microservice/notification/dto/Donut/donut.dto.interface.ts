@@ -1,5 +1,7 @@
+import { User } from '@share/types';
+
 export interface DonutSubscriptionIssuanceDtoInterface {
-  userId: number;
+  userId: User['id'];
   userVkId: number;
   // был ли пользователь в системе
   isUser: boolean;

@@ -1,25 +1,11 @@
-import type { ParameterRequestVkUserEventInterface } from '../../types';
-import { UserDtoInterface } from '../User';
+import type { ParameterRequestVkUserEventInterface } from '@main/types';
+import { CommentNumber, NumberEssence, User } from '@share/types';
+import type { UserDtoInterface } from '../User';
 
-export enum CommentStatusEnum {
-  // модерация
-  MODERATION = 'moderation',
-  // отклонено
-  DECLINED = 'declined',
-  // опубликован
-  PUBLISHED = 'published',
-  CORRECTING = 'correcting',
-}
-
-export interface CommentDtoInterface {
-  commentId: number;
-  userId: number;
-  text: string;
-  isAnon: boolean;
-  status: CommentStatusEnum;
-  createdAt: Date;
-  updatedAt: Date;
-  userVkId: number;
+export interface CommentDtoInterface extends Omit<CommentNumber, 'id'> {
+  commentId: CommentNumber['id'];
+  number: NumberEssence['number'];
+  userVkId: User['vkId'];
 }
 
 export interface CommentDeleteDtoInterface

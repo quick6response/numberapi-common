@@ -1,4 +1,4 @@
-import { MainConstantEventName } from '../../../constant';
+import { MainConstantEventName } from '@constant/main';
 import {
   AuthLoginDtoInterface,
   AuthRegistrationDtoInterface,
@@ -19,7 +19,7 @@ import {
   UserAnotherFindNumberDtoInterface,
   UserCreateDtoInterface,
   UserUpdateDtoInterface,
-} from '../dto';
+} from '@main/dto';
 
 export type RabbitmqNotificationEventKey =
   keyof typeof MainConstantEventName.notification;

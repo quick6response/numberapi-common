@@ -13,12 +13,13 @@
     "removeComments": true,
     "baseUrl": "./src",
     "outDir": "./dist",
-    "rootDir": "src",
+    "rootDir": "./src",
     "paths": {
-      "@notification/*": ["src/microservice/notification/*"],
-      "@notification/dto/*": ["src/microservice/notification/dto/*"],
-      "@main/*": ["src/microservice/notification/*"],
-      "@constant/*": ["src/constant/*"]
+      "@notification/*": ["microservice/notification/*"],
+      "@notification/dto/*": ["microservice/notification/dto/*"],
+      "@main/*": ["microservice/notification/*"],
+      "@constant/*": ["constant/*"],
+      "@share/*": ["share/*"],
     }
   },
   "ts-node": {
