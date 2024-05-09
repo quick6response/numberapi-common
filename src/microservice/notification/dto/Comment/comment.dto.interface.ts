@@ -1,7 +1,7 @@
 import type { ParameterRequestVkUserEventInterface } from '../../types';
 import { UserDtoInterface } from '../User';
 
-enum CommentStatusEnum {
+export enum CommentStatusEnum {
   // модерация
   MODERATION = 'moderation',
   // отклонено
