@@ -18,15 +18,12 @@ export interface CommentCreateDtoInterface
   comment: CommentDtoInterface;
 }
 
-export interface CommentCreateDtoInterface
-  extends ParameterRequestVkUserEventInterface {
-  comment: CommentDtoInterface;
-}
-
 export interface CommentEditDtoInterface
   extends ParameterRequestVkUserEventInterface {
   prevComment: CommentDtoInterface;
   nextComment: CommentDtoInterface;
+  // поля, которые изменились
+  changes: (keyof Pick<CommentDtoInterface, 'isAnon' | 'text'>)[];
 }
 
 export interface CommentNumberModerateDtoInterface
