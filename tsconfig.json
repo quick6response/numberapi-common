@@ -14,6 +14,7 @@
     "outDir": "dist",
     "baseUrl": "./src",
     "rootDir": "./src",
+    "emitDeclarationOnly": false,
     "paths": {
       "@share": ["./share"],
       "@share/*": ["./share/*"],
@@ -27,5 +28,5 @@
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": ["node_modules"]
 }
