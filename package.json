@@ -1,10 +1,10 @@
 {
   "name": "@quick_response/number_api_event",
-  "version": "1.0.8-beta20",
+  "version": "1.0.9",
   "description": "",
   "private": false,
   "scripts": {
-    "build": "rm -rf dist && tsc -p . && tsc -p tsconfig.types.json && tsc-alias -v --dir dist -p tsconfig.json",
+    "build": "rm -rf lib && tsc -p . && tsc -p tsconfig.types.json && tsc-alias -v --dir lib -p tsconfig.json",
     "prepublishOnly": "npm run build && npm run ts-alias",
     "ts-alias": "tsc-alias -v --dir dist -p tsconfig.json"
   },
@@ -29,11 +29,37 @@
     "dist"
   ],
   "exports": {
-    "./*": {
+    "./constant": {
+      "import": "./dist/constant/index.mjs",
+      "require": "./dist/constant/index.js",
+      "types": "./dist/constant/index.d.ts"
+    },
+    "./share": {
+      "import": "./dist/share/index.mjs",
+      "require": "./dist/share/index.js",
+      "types": "./dist/share/index.d.ts"
+    },
+    "./microservice": {
+      "import": "./dist/microservice/index.mjs",
+      "require": "./dist/microservice/index.js",
+      "types": "./dist/microservice/index.d.ts"
+    },
+    ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     }
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "prettier --ignore-path ./.prettierignore --write"
+    ],
+    "packages/**/*.json": [
+      "prettier --ignore-path ./.prettierignore --write"
+    ]
+  },
+  "engines": {
+    "node": ">= 16"
   },
   "devDependencies": {
     "@types/node": "^20.12.11",

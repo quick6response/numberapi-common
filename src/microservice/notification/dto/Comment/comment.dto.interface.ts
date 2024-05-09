@@ -1,5 +1,5 @@
-import type { ParameterRequestVkUserEventInterface } from '@main/types';
-import { CommentNumber, NumberEssence, User } from '@share/types';
+import { ParameterRequestVkUserEventInterface } from '@microservice/notification';
+import { CommentNumber, NumberEssence, User } from '@share';
 import type { UserDtoInterface } from '../User';
 
 export interface CommentDtoInterface extends Omit<CommentNumber, 'id'> {
