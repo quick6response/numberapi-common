@@ -1,6 +1,6 @@
 {
   "name": "@quick_response/number_api_event",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "dist/index.js",
   "private": false,
@@ -12,6 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/quick6response/number_api_event.git"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "keywords": [
     "typescript",
     "rabbitmq",
@@ -21,7 +25,7 @@
   "license": "MIT",
   "types": "dist/src/index.d.ts",
   "files": [
-    "dist/src"
+    "dist"
   ],
   "devDependencies": {
     "@types/node": "^20.12.11",
@@ -36,9 +40,5 @@
     "eslint-plugin-unicorn": "^51.0.1",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
   }
 }
