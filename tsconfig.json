@@ -1,14 +1,19 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "outDir": "dist",
+  "compilerOptions":{
+    "target": "ES2019",
+    "module": "ESNext",
+    "lib": ["ES2019", "DOM", "ESNext"],
+    "moduleResolution": "Node",
     "noImplicitAny": true,
+    "resolveJsonModule": true,
     "strictNullChecks": true,
     "sourceMap": true,
     "declaration": true,
     "esModuleInterop": true,
     "removeComments": true,
     "baseUrl": "./src",
+    "outDir": "./dist",
+    "rootDir": "src",
     "paths": {
       "@notification/*": ["src/microservice/notification/*"],
       "@notification/dto/*": ["src/microservice/notification/dto/*"],
@@ -16,6 +21,13 @@
       "@constant/*": ["src/constant/*"]
     }
   },
-  "include": ["src/**/*"],
+  "ts-node": {
+    // these options are overrides used only by ts-node
+    // same as our --compilerOptions flag and our TS_NODE_COMPILER_OPTIONS environment variable
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "include": ["src/"],
   "exclude": ["node_modules"]
 }

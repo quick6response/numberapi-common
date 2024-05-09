@@ -3,7 +3,7 @@
  */
 export interface ParameterRequestVkUserEventInterface {
   vk_access_token_settings: string;
-  vk_app_id: string;
+  vk_app_id: number;
   vk_are_notifications_enabled: number;
   vk_is_app_user: number;
   vk_is_favorite: number;

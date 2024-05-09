@@ -1,3 +1,4 @@
+import { MainConstantEventName } from '../../../constant';
 import {
   AuthLoginDtoInterface,
   AuthRegistrationDtoInterface,
@@ -20,10 +21,13 @@ import {
   UserUpdateDtoInterface,
 } from '../dto';
 
+export type RabbitmqNotificationEventKey =
+  keyof typeof MainConstantEventName.notification;
+
 /**
  * События, которые принимает микросервис по работе с уведомлениями
  */
-export type RabbitmqNotificationEventType = {
+export type RabbitmqNotificationEvents = {
   /**
    * Авторизация пользователя в ВК
    */

@@ -1,1 +1,2 @@
-export * from './microservice/notification';
+export * from './microservice';
+export * from './constant';

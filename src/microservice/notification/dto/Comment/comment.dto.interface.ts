@@ -30,7 +30,8 @@ export interface CommentCreateDtoInterface
   extends ParameterRequestVkUserEventInterface,
     CommentDtoInterface {}
 
-export interface CommentNumberModerateDtoInterface {
+export interface CommentNumberModerateDtoInterface
+  extends ParameterRequestVkUserEventInterface {
   // информация о том кто выполнил действие
   userInfo: Omit<UserDtoInterface, 'numberUserId'>;
   // комментарий
