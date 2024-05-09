@@ -4,6 +4,7 @@ import {
   AuthRegistrationDtoInterface,
   CommentCreateDtoInterface,
   CommentDeleteDtoInterface,
+  CommentEditDtoInterface,
   CommentNumberModerateDtoInterface,
   DonutSubscriptionExpiredDtoInterface,
   DonutSubscriptionIssuanceDtoInterface,
@@ -46,6 +47,11 @@ export type RabbitmqNotificationEvents = {
    * Создание комментария
    */
   comment_create: CommentCreateDtoInterface;
+
+  /**
+   * Создание комментария
+   */
+  comment_edit: CommentEditDtoInterface;
 
   /**
    * поиск номера

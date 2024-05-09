@@ -19,6 +19,11 @@ export const NotificationEventConstant = {
   comment_create: 'comment_create',
 
   /**
+   * Изменение комментария
+   */
+  comment_edit: 'comment_edit',
+
+  /**
    * поиск номера
    */
   number_find: 'number_find',

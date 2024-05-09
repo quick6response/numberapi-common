@@ -9,12 +9,25 @@ export interface CommentDtoInterface extends Omit<CommentNumber, 'id'> {
 }
 
 export interface CommentDeleteDtoInterface
-  extends ParameterRequestVkUserEventInterface,
-    CommentDtoInterface {}
+  extends ParameterRequestVkUserEventInterface {
+  comment: CommentDtoInterface;
+}
 
 export interface CommentCreateDtoInterface
-  extends ParameterRequestVkUserEventInterface,
-    CommentDtoInterface {}
+  extends ParameterRequestVkUserEventInterface {
+  comment: CommentDtoInterface;
+}
+
+export interface CommentCreateDtoInterface
+  extends ParameterRequestVkUserEventInterface {
+  comment: CommentDtoInterface;
+}
+
+export interface CommentEditDtoInterface
+  extends ParameterRequestVkUserEventInterface {
+  prevComment: CommentDtoInterface;
+  nextComment: CommentDtoInterface;
+}
 
 export interface CommentNumberModerateDtoInterface
   extends ParameterRequestVkUserEventInterface {
