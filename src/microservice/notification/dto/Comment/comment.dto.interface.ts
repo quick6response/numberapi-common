@@ -1,20 +1,22 @@
-import { ParameterRequestVkUserEventInterface } from '@microservice/notification';
+import {
+  ParameterRequestVkUserEventInterface,
+  ParameterClientInfoActionEventAllPlatform,
+} from '@microservice/notification';
 import { CommentNumber, NumberEssence, User } from '@share';
 import type { UserDtoInterface } from '../User';
 
 export interface CommentDtoInterface extends Omit<CommentNumber, 'id'> {
   commentId: CommentNumber['id'];
   number: NumberEssence['number'];
-  userVkId: User['vkId'];
 }
 
 export interface CommentDeleteDtoInterface
-  extends ParameterRequestVkUserEventInterface {
+  extends ParameterClientInfoActionEventAllPlatform {
   comment: CommentDtoInterface;
 }
 
 export interface CommentCreateDtoInterface
-  extends ParameterRequestVkUserEventInterface {
+  extends ParameterClientInfoActionEventAllPlatform {
   comment: CommentDtoInterface;
 }
 
@@ -24,7 +26,7 @@ export type CommentEditChangeColumns = keyof Pick<
 >;
 
 export interface CommentEditDtoInterface
-  extends ParameterRequestVkUserEventInterface {
+  extends ParameterClientInfoActionEventAllPlatform {
   prevComment: CommentDtoInterface;
   nextComment: CommentDtoInterface;
   // поля, которые изменились
@@ -32,7 +34,7 @@ export interface CommentEditDtoInterface
 }
 
 export interface CommentNumberModerateDtoInterface
-  extends ParameterRequestVkUserEventInterface {
+  extends ParameterClientInfoActionEventAllPlatform {
   // информация о том кто выполнил действие
   userInfo: Omit<UserDtoInterface, 'numberUserId'>;
   // комментарий

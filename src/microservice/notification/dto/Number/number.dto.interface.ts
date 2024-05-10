@@ -1,9 +1,9 @@
 import { NumberEssence, User } from '@share/types';
-import type { ParameterRequestVkUserEventInterface } from '../../types';
+import { ParameterClientInfoActionEventAllPlatform } from '../../types';
 import { OrganizationDtoInterface } from '../Organization';
 
 export interface NumberFindDtoInterface
-  extends ParameterRequestVkUserEventInterface {
+  extends ParameterClientInfoActionEventAllPlatform {
   number: NumberEssence['number'];
   numberId: NumberEssence['id'];
   isNewNumber: boolean;
@@ -19,7 +19,7 @@ export interface NumberFindErrorDtoInterface extends NumberFindDtoInterface {
  * Для номера закреплена организация в системе
  */
 export interface NumberOrganizationPinDtoInterface
-  extends ParameterRequestVkUserEventInterface {
+  extends ParameterClientInfoActionEventAllPlatform {
   number: {
     number: NumberEssence['number'];
     numberId: NumberEssence['id'];

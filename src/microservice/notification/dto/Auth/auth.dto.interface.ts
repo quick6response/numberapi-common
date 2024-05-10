@@ -1,12 +1,12 @@
 import { User } from '@share/types';
-import type { ParameterRequestVkUserEventInterface } from '../../types';
+import type { ParameterClientInfoActionEventAllPlatform } from '../../types';
 
 export interface AuthLoginDtoInterface
-  extends ParameterRequestVkUserEventInterface {
+  extends ParameterClientInfoActionEventAllPlatform {
   userId: User['id'];
 }
 
 export interface AuthRegistrationDtoInterface
-  extends ParameterRequestVkUserEventInterface {
+  extends ParameterClientInfoActionEventAllPlatform {
   userId: User['id'];
 }
