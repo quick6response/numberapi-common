@@ -1,12 +1,10 @@
-import { User } from '@share/types';
+import type { User } from '@share/types';
 import type { ParameterClientInfoActionEventAllPlatform } from '../../types';
 
-export interface AuthLoginDtoInterface
-  extends ParameterClientInfoActionEventAllPlatform {
+export type AuthLoginDto = {
   userId: User['id'];
-}
+} & ParameterClientInfoActionEventAllPlatform;
 
-export interface AuthRegistrationDtoInterface
-  extends ParameterClientInfoActionEventAllPlatform {
+export type AuthRegistrationDto = {
   userId: User['id'];
-}
+} & ParameterClientInfoActionEventAllPlatform;

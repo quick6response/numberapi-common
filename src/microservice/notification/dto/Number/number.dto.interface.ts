@@ -2,28 +2,31 @@ import { NumberEssence, User } from '@share/types';
 import { ParameterClientInfoActionEventAllPlatform } from '../../types';
 import { OrganizationDtoInterface } from '../Organization';
 
-export interface NumberFindDtoInterface
-  extends ParameterClientInfoActionEventAllPlatform {
+export type NumberFindDto = {
   number: NumberEssence['number'];
   numberId: NumberEssence['id'];
   isNewNumber: boolean;
   isUpdate?: boolean;
-  userId: User['id'];
-}
+  /**
+   * @deprecated Используйте поле user
+   * // todo удалить в версии 2.0.0
+   */
+  userId?: User['id'];
+} & ParameterClientInfoActionEventAllPlatform;
 
-export interface NumberFindErrorDtoInterface extends NumberFindDtoInterface {
+// ошибка в поиске номера
+export type NumberFindErrorDto = {
   errorText: unknown;
-}
+} & NumberFindDto;
 
 /**
  * Для номера закреплена организация в системе
  */
-export interface NumberOrganizationPinDtoInterface
-  extends ParameterClientInfoActionEventAllPlatform {
+export type NumberOrganizationPinDto = {
   number: {
     number: NumberEssence['number'];
     numberId: NumberEssence['id'];
   };
   organization: OrganizationDtoInterface;
   date: number;
-}
+} & ParameterClientInfoActionEventAllPlatform;
