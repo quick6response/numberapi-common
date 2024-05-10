@@ -14,14 +14,14 @@
     "outDir": "dist",
     "baseUrl": "./src",
     "rootDir": "./src",
-    "emitDeclarationOnly": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
     "paths": {
       "@share": ["./share"],
       "@share/*": ["./share/*"],
       
       "@constant": ["./constant"],
       "@constant/*": ["./constant/*"],
-      
       
       "@microservice": ["./microservice"],
       "@microservice/*": ["./microservice/*"]
