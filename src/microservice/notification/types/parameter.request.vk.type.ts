@@ -1,7 +1,5 @@
-import {
-  ClientPlatformEnum,
-  ParameterRequestActionInterface,
-} from '@microservice/notification/types/parameter.request.action.type';
+import { ClientPlatformEnum } from '@constant/platform.constant';
+import { ParameterRequestActionInterface } from '@microservice/notification/types/parameter.request.action.type';
 
 interface ClientInfoVk {
   vk_access_token_settings: string;

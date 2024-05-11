@@ -1,5 +1,5 @@
+import { ParameterClientInfoActionEventAllPlatform } from '@microservice/notification/types/parameter.client.info.type';
 import { NumberEssence, User } from '@share/types';
-import { ParameterClientInfoActionEventAllPlatform } from '../../types';
 import { OrganizationDtoInterface } from '../Organization';
 
 export type NumberFindDto = {

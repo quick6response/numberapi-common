@@ -1,5 +1,5 @@
-import { ParameterClientInfoActionEventAllPlatform } from '@microservice/notification';
-import { CommentNumber, NumberEssence, User } from '@share';
+import { ParameterClientInfoActionEventAllPlatform } from '@microservice/notification/types/parameter.client.info.type';
+import { CommentNumber, NumberEssence } from '@share';
 import type { UserDtoInterface } from '../User';
 
 export interface CommentDtoInterface extends Omit<CommentNumber, 'id'> {

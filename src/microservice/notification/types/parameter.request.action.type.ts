@@ -1,12 +1,5 @@
+import { ClientPlatformEnum } from '@constant/platform.constant';
 import { User } from '@share';
-
-export enum ClientPlatformEnum {
-  VK = 'vk',
-  VK_BOT = 'vk_bot',
-  TELEGRAM = 'telegram',
-  ODNOKLASSNIKI = 'odnoklassniki',
-  WEB = 'web',
-}
 
 /**
  * Данные приходящие с сервиса АПИ после действия
