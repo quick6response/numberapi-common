@@ -14,9 +14,9 @@ export type ParameterClientInfoActionEventAllPlatform =
 export type ParameterClientInfoActionEvent<
   Platform extends ClientPlatformEnum,
 > = Platform extends ClientPlatformEnum.VK
-  ? ParameterRequestVkUserEventInterface
+  ? ParameterRequestVkUserEventInterface['clientInfo']
   : Platform extends ClientPlatformEnum.TELEGRAM
-    ? ParameterRequestTelegramUserEventInterface
+    ? ParameterRequestTelegramUserEventInterface['clientInfo']
     : //   : Platform extends ClientPlatformEnum.ODNOKLASSNIKI
       //   ? // Добавьте здесь тип для ODNOKLASSNIKI
       //   : Platform extends ClientPlatformEnum.WEB
