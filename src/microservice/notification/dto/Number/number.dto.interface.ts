@@ -2,14 +2,19 @@ import { ParameterClientInfoActionEventAllPlatform } from '@microservice/notific
 import { NumberEssence, User } from '@share/types';
 import { OrganizationDtoInterface } from '../Organization';
 
+export enum StatusFindNumber {
+  UPDATE = 'update',
+  CREATE = 'create',
+  CACHE = 'cache',
+  FIND = 'find',
+}
+
 export type NumberFindDto = {
   number: {
     number: NumberEssence['number'];
     numberId: NumberEssence['id'];
   };
-  isNumberCreate?: boolean;
-  isNumberUpdate?: boolean;
-  isNumberCache?: boolean;
+  status: StatusFindNumber;
   /**
    * @deprecated Используйте поле user
    * // todo удалить в версии 2.0.0
