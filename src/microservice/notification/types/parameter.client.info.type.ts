@@ -4,9 +4,9 @@ import { ParameterRequestTelegramUserEventInterface } from '@microservice/notifi
 // множество разных интерфейсов, которые написаны под разные платформы
 import { ParameterRequestVkUserEventInterface } from '@microservice/notification/types/parameter.request.vk.type';
 
+// todo понять кака тут использовать разные платформы и побороть ошибки типизации в сервисе АПИ
 export type ParameterClientInfoActionEventAllPlatform =
-  | ParameterRequestVkUserEventInterface
-  | ParameterRequestTelegramUserEventInterface;
+  ParameterRequestVkUserEventInterface;
 
 // тип, который помогает узнать информацию о пользователе на основе типа платформы
 export type ParameterClientInfoActionEvent<
