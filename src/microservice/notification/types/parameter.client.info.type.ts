@@ -35,3 +35,13 @@ export type ParameterClientInfoActionEvent<
       //   : Platform extends ClientPlatformEnum.WEB
       //   ? // Добавьте здесь тип для WEB
       never;
+
+export function getClientInfoByPlatform<Platform extends ClientPlatformEnum>(
+  platform: Platform,
+  clientInfo: ParameterClientInfoActionEvent<Platform>,
+) {
+  return {
+    clientInfo,
+    clientPlatform: platform,
+  };
+}
