@@ -38,8 +38,11 @@ export type ParameterClientInfoActionEvent<
 
 export function getClientInfoByPlatform<Platform extends ClientPlatformEnum>(
   platform: Platform,
-  clientInfo: ParameterClientInfoActionEvent<Platform>,
-) {
+  clientInfo: ParameterClientInfoActionEventAllPlatformInterface['clientInfo'],
+): {
+  clientInfo: ParameterClientInfoActionEvent<Platform>;
+  clientPlatform: ClientPlatformEnum;
+} {
   return {
     clientInfo,
     clientPlatform: platform,
