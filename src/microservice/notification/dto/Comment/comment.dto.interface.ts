@@ -34,6 +34,6 @@ export type CommentNumberModerateDto = {
    */
   userInfo?: Omit<UserDtoInterface, 'numberUserId'>;
   // комментарий
-  comment: CommentDtoInterface;
+  comment: CommentDtoInterface & { prevStatus: CommentDtoInterface['status'] };
   date: number;
 } & ParameterClientInfoActionEventAllPlatform;
