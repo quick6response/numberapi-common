@@ -32,7 +32,7 @@ export type CommentNumberModerateDto = {
   /**
    * @deprecated Используйте поле user
    */
-  userInfo: Omit<UserDtoInterface, 'numberUserId'>;
+  userInfo?: Omit<UserDtoInterface, 'numberUserId'>;
   // комментарий
   comment: CommentDtoInterface;
   date: number;
