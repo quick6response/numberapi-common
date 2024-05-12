@@ -3,10 +3,13 @@ import { NumberEssence, User } from '@share/types';
 import { OrganizationDtoInterface } from '../Organization';
 
 export type NumberFindDto = {
-  number: NumberEssence['number'];
-  numberId: NumberEssence['id'];
-  isNewNumber: boolean;
-  isUpdate?: boolean;
+  number: {
+    number: NumberEssence['number'];
+    numberId: NumberEssence['id'];
+  };
+  isNumberCreate?: boolean;
+  isNumberUpdate?: boolean;
+  isNumberCache?: boolean;
   /**
    * @deprecated Используйте поле user
    * // todo удалить в версии 2.0.0
@@ -28,5 +31,6 @@ export type NumberOrganizationPinDto = {
     numberId: NumberEssence['id'];
   };
   organization: OrganizationDtoInterface;
+  status: 'create' | 'update';
   date: number;
 };
