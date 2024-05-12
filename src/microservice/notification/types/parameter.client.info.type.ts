@@ -41,10 +41,23 @@ export function getClientInfoByPlatform<Platform extends ClientPlatformEnum>(
   clientInfo: ParameterClientInfoActionEventAllPlatformInterface['clientInfo'],
 ): {
   clientInfo: ParameterClientInfoActionEvent<Platform>;
-  clientPlatform: ClientPlatformEnum;
+  clientPlatform: Platform;
 } {
-  return {
-    clientInfo,
-    clientPlatform: platform,
-  };
+  if (platform === ClientPlatformEnum.VK) {
+    return {
+      clientInfo: clientInfo as ParameterClientInfoActionEvent<Platform>,
+      clientPlatform: platform,
+    };
+  } else if (platform === ClientPlatformEnum.TELEGRAM) {
+    return {
+      clientInfo: clientInfo as ParameterClientInfoActionEvent<Platform>,
+      clientPlatform: platform,
+    };
+  } else {
+    throw new Error('Invalid platform');
+  }
 }
+
+//
+// clientInfo: ParameterClientInfoActionEvent<Platform>;
+// clientPlatform: ClientPlatformEnum;
