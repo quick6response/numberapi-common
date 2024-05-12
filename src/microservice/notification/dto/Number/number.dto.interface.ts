@@ -29,4 +29,4 @@ export type NumberOrganizationPinDto = {
   };
   organization: OrganizationDtoInterface;
   date: number;
-} & ParameterClientInfoActionEventAllPlatform;
+};
