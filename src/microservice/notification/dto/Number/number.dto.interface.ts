@@ -1,4 +1,4 @@
-import { ParameterClientInfoActionEventAllPlatform } from '@microservice/notification/types/parameter.client.info.type';
+import { ParameterClientInfoActionEventAllPlatformInterface } from '@microservice/notification/types/parameter.client.info.type';
 import { NumberEssence, User } from '@share/types';
 import { OrganizationDtoInterface } from '../Organization';
 
@@ -9,7 +9,8 @@ export enum StatusFindNumber {
   FIND = 'find',
 }
 
-export type NumberFindDto = {
+export interface NumberFindDto
+  extends ParameterClientInfoActionEventAllPlatformInterface {
   number: {
     number: NumberEssence['number'];
     numberId: NumberEssence['id'];
@@ -20,7 +21,7 @@ export type NumberFindDto = {
    * // todo удалить в версии 2.0.0
    */
   userId?: User['id'];
-} & ParameterClientInfoActionEventAllPlatform;
+}
 
 // ошибка в поиске номера
 export type NumberFindErrorDto = {

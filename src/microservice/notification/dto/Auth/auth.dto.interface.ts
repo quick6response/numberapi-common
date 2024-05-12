@@ -1,10 +1,22 @@
-import { ParameterClientInfoActionEventAllPlatform } from '@microservice/notification/types/parameter.client.info.type';
+import { ParameterClientInfoActionEventAllPlatformInterface } from '@microservice/notification/types/parameter.client.info.type';
 import type { User } from '@share/types';
 
-export type AuthLoginDto = {
-  userId: User['id'];
-} & ParameterClientInfoActionEventAllPlatform;
+export interface AuthLoginDto
+  extends ParameterClientInfoActionEventAllPlatformInterface {
+  /**
+   *
+   * @deprecated Используйте поле user
+   * todo удалить в версии 2.0.0
+   */
+  userId?: User['id'];
+}
 
-export type AuthRegistrationDto = {
-  userId: User['id'];
-} & ParameterClientInfoActionEventAllPlatform;
+export interface AuthRegistrationDto
+  extends ParameterClientInfoActionEventAllPlatformInterface {
+  /**
+   *
+   * @deprecated Используйте поле user
+   * todo удалить в версии 2.0.0
+   */
+  userId?: User['id'];
+}

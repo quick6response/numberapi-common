@@ -1,4 +1,4 @@
-import { ParameterClientInfoActionEventAllPlatform } from '@microservice/notification/types/parameter.client.info.type';
+import { ParameterClientInfoActionEventAllPlatformInterface } from '@microservice/notification/types/parameter.client.info.type';
 import { CommentNumber, NumberEssence } from '@share';
 import type { UserDtoInterface } from '../User';
 
@@ -7,27 +7,31 @@ export interface CommentDtoInterface extends Omit<CommentNumber, 'id'> {
   number: NumberEssence['number'];
 }
 
-export type CommentDeleteDto = {
+export interface CommentDeleteDto
+  extends ParameterClientInfoActionEventAllPlatformInterface {
   comment: CommentDtoInterface;
-} & ParameterClientInfoActionEventAllPlatform;
+}
 
-export type CommentCreateDto = {
+export interface CommentCreateDto
+  extends ParameterClientInfoActionEventAllPlatformInterface {
   comment: CommentDtoInterface;
-} & ParameterClientInfoActionEventAllPlatform;
+}
 
 export type CommentEditChangeColumns = keyof Pick<
   CommentDtoInterface,
   'isAnon' | 'text'
 >;
 
-export type CommentEditDto = {
+export interface CommentEditDto
+  extends ParameterClientInfoActionEventAllPlatformInterface {
   prevComment: CommentDtoInterface;
   nextComment: CommentDtoInterface;
   // поля, которые изменились
   changes: CommentEditChangeColumns[];
-} & ParameterClientInfoActionEventAllPlatform;
+}
 
-export type CommentNumberModerateDto = {
+export interface CommentNumberModerateDto
+  extends ParameterClientInfoActionEventAllPlatformInterface {
   // информация о том кто выполнил действие
   /**
    * @deprecated Используйте поле user
@@ -36,4 +40,4 @@ export type CommentNumberModerateDto = {
   // комментарий
   comment: CommentDtoInterface & { prevStatus: CommentDtoInterface['status'] };
   date: number;
-} & ParameterClientInfoActionEventAllPlatform;
+}
