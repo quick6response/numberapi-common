@@ -1,3 +1,5 @@
+import { ClientPlatformEnum } from '@constant/platform.constant';
+
 export enum UserRoleEnum {
   User = 'user',
   Admin = 'admin',
@@ -5,12 +7,26 @@ export enum UserRoleEnum {
   Helper = 'helper',
 }
 
+/**
+ * Информация о пользователе передаваемая в сервис для уведомлений
+ */
 export interface User {
   id: number;
-  vkId: number;
-  numberUserId: number;
-  numberId: number;
-  name: string;
-  avatar: string;
+  /**
+   * @deprecated Скоро будет удалено, после введения множественной авторизации на разных платформах
+   */
+  idVk: number;
+  lastName: string;
+  firstName: string;
   role: UserRoleEnum;
+}
+
+/**
+ * Привязанные социальные сети к пользователю
+ */
+export interface UserAuthAttachedSocialNetworks {
+  id: number;
+  name: string;
+  clientPlatform: ClientPlatformEnum;
+  userId: User['id'];
 }
