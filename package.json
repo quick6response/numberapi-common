@@ -4,7 +4,7 @@
   "description": "",
   "private": false,
   "scripts": {
-    "build": "rm -rf lib && tsc -p . && tsc -p tsconfig.types.json && tsc-alias -v --dir lib -p tsconfig.json",
+    "build": "rm -rf dist && tsc -p . && tsc -p tsconfig.types.json && tsc-alias -v --dir dist -p tsconfig.json",
     "prepublishOnly": "npm run build && npm run ts-alias",
     "ts-alias": "tsc-alias -v --dir dist -p tsconfig.json"
   },
