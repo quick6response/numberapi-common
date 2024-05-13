@@ -1,1 +1,1 @@
-export {};
+export * from './parameter.client.info.type';
