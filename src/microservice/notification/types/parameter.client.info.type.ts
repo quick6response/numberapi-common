@@ -35,3 +35,29 @@ export type ParameterClientInfoActionEvent<
       //   : Platform extends ClientPlatformEnum.WEB
       //   ? // Добавьте здесь тип для WEB
       never;
+
+export function getClientInfoByPlatform<Platform extends ClientPlatformEnum>(
+  platform: Platform,
+  clientInfo: ParameterClientInfoActionEventAllPlatformInterface['clientInfo'],
+): {
+  clientInfo: ParameterClientInfoActionEvent<Platform>;
+  clientPlatform: Platform;
+} {
+  if (platform === ClientPlatformEnum.VK) {
+    return {
+      clientInfo: clientInfo as ParameterClientInfoActionEvent<Platform>,
+      clientPlatform: platform,
+    };
+  } else if (platform === ClientPlatformEnum.TELEGRAM) {
+    return {
+      clientInfo: clientInfo as ParameterClientInfoActionEvent<Platform>,
+      clientPlatform: platform,
+    };
+  } else {
+    throw new Error('Invalid platform');
+  }
+}
+
+//
+// clientInfo: ParameterClientInfoActionEvent<Platform>;
+// clientPlatform: ClientPlatformEnum;

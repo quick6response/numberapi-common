@@ -1,10 +1,10 @@
 {
   "name": "@quick_response/number_api_event",
-  "version": "1.1.1-beta10",
+  "version": "1.1.1-beta41",
   "description": "",
   "private": false,
   "scripts": {
-    "build": "rm -rf lib && tsc -p . && tsc -p tsconfig.types.json && tsc-alias -v --dir lib -p tsconfig.json",
+    "build": "rm -rf dist && tsc -p . && tsc -p tsconfig.types.json && tsc-alias -v --dir dist -p tsconfig.json",
     "prepublishOnly": "npm run build && npm run ts-alias",
     "ts-alias": "tsc-alias -v --dir dist -p tsconfig.json"
   },
@@ -50,13 +50,6 @@
       "types": "./dist/index.d.ts"
     },
     "./package.json": "./package.json"
-  },
-  "typesVersions": {
-    "*": {
-      "constant": ["dist/constant/index.d.ts"],
-      "share": ["dist/share/index.d.ts"],
-      "microservice": ["dist/microservice/index.d.ts"]
-    }
   },
   "lint-staged": {
     "**/*.ts": [
