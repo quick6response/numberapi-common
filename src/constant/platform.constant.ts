@@ -1,4 +1,4 @@
-export enum ClientPlatformEnum {
+export const enum ClientPlatformEnum {
   VK = 'vk',
   VK_BOT = 'vk_bot',
   TELEGRAM = 'telegram',
