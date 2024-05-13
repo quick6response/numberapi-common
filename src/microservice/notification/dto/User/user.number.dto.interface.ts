@@ -8,6 +8,7 @@ export interface UserAnotherFindNumberDtoInterface {
   isBlock: boolean;
   // айди пользователя чей номер телефона
   userId: User['id'];
+  // todo под разные платформы должен быть разный формат айди пользователя или другая инфорация о том, кому информацию отправить
   userVkId: number;
   date: number;
 }

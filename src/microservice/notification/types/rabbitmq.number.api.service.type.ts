@@ -1,17 +1,17 @@
 import { MainConstantEventName } from '@constant';
 import {
-  AuthLoginDtoInterface,
-  AuthRegistrationDtoInterface,
-  CommentCreateDtoInterface,
-  CommentDeleteDtoInterface,
-  CommentEditDtoInterface,
-  CommentNumberModerateDtoInterface,
+  AuthLoginDto,
+  AuthRegistrationDto,
+  CommentCreateDto,
+  CommentDeleteDto,
+  CommentEditDto,
+  CommentNumberModerateDto,
   DonutSubscriptionExpiredDtoInterface,
   DonutSubscriptionIssuanceDtoInterface,
   DonutSubscriptionProlongedDtoInterface,
-  NumberFindDtoInterface,
-  NumberFindErrorDtoInterface,
-  NumberOrganizationPinDtoInterface,
+  NumberFindDto,
+  NumberFindErrorDto,
+  NumberOrganizationPinDto,
   OperatorCreateDtoInterface,
   OrganizationCreateDtoInterface,
   OrganizationCreateErrorDtoInterface,
@@ -32,36 +32,36 @@ export type RabbitmqNotificationEvents = {
   /**
    * Авторизация пользователя в ВК
    */
-  auth_login_user: AuthLoginDtoInterface;
+  auth_login_user: AuthLoginDto;
   /**
    * Регистрация пользователя ВК
    */
-  auth_register_user: AuthRegistrationDtoInterface;
+  auth_register_user: AuthRegistrationDto;
 
   /**
    * Удаление комментария пользователем
    */
-  comment_delete: CommentDeleteDtoInterface;
+  comment_delete: CommentDeleteDto;
 
   /**
    * Создание комментария
    */
-  comment_create: CommentCreateDtoInterface;
+  comment_create: CommentCreateDto;
 
   /**
    * Создание комментария
    */
-  comment_edit: CommentEditDtoInterface;
+  comment_edit: CommentEditDto;
 
   /**
    * поиск номера
    */
-  number_find: NumberFindDtoInterface;
+  number_find: NumberFindDto;
 
   /**
    * Ошибка поиск номера.
    */
-  number_find_error: NumberFindErrorDtoInterface;
+  number_find_error: NumberFindErrorDto;
 
   /**
    * Создание нового оператора автоматически системой в процессе поиска номеров
@@ -95,7 +95,7 @@ export type RabbitmqNotificationEvents = {
   /**
    * Прикрепление организации к номеру
    */
-  number_organization_pin: NumberOrganizationPinDtoInterface;
+  number_organization_pin: NumberOrganizationPinDto;
 
   /**
    /**
@@ -110,7 +110,7 @@ export type RabbitmqNotificationEvents = {
   /**
    * Модерация комментария
    */
-  comment_moderation_number: CommentNumberModerateDtoInterface;
+  comment_moderation_number: CommentNumberModerateDto;
 
   /**
    * Обратное уведомление об успешном Оформление подписки в сервисе

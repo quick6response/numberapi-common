@@ -1,12 +1,22 @@
-import { User } from '@share/types';
-import type { ParameterRequestVkUserEventInterface } from '../../types';
+import { ParameterClientInfoActionEventAllPlatformInterface } from '@microservice/notification/types/parameter.client.info.type';
+import type { User } from '@share/types';
 
-export interface AuthLoginDtoInterface
-  extends ParameterRequestVkUserEventInterface {
-  userId: User['id'];
+export interface AuthLoginDto
+  extends ParameterClientInfoActionEventAllPlatformInterface {
+  /**
+   *
+   * @deprecated Используйте поле user
+   * todo удалить в версии 2.0.0
+   */
+  userId?: User['id'];
 }
 
-export interface AuthRegistrationDtoInterface
-  extends ParameterRequestVkUserEventInterface {
-  userId: User['id'];
+export interface AuthRegistrationDto
+  extends ParameterClientInfoActionEventAllPlatformInterface {
+  /**
+   *
+   * @deprecated Используйте поле user
+   * todo удалить в версии 2.0.0
+   */
+  userId?: User['id'];
 }
