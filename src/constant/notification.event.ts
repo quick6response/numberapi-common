@@ -55,12 +55,12 @@ export const NotificationEventConstant = {
   /**
    * Добавление организации
    */
-  organization_create_error_system: 'organization_create_error_system',
+  organization_create_system_error: 'organization_create_system_error',
 
   /**
    * Обновление организации
    */
-  organization_update_error_system: 'organization_update_error_system',
+  organization_update_update_error: 'organization_update_update_error',
 
   /**
    * Прикрепление организации к номеру

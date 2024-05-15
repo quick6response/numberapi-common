@@ -85,12 +85,12 @@ export type RabbitmqNotificationEvents = {
   /**
    * Добавление организации
    */
-  organization_create_error_system: OrganizationCreateErrorDtoInterface;
+  organization_create_system_error: OrganizationCreateErrorDtoInterface;
 
   /**
    * Обновление организации
    */
-  organization_update_error_system: OrganizationUpdateErrorDtoInterface;
+  organization_update_update_error: OrganizationUpdateErrorDtoInterface;
 
   /**
    * Прикрепление организации к номеру
