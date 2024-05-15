@@ -90,7 +90,7 @@ export type RabbitmqNotificationEvents = {
   /**
    * Обновление организации
    */
-  organization_update_update_error: OrganizationUpdateErrorDtoInterface;
+  organization_update_error: OrganizationUpdateErrorDtoInterface;
 
   /**
    * Прикрепление организации к номеру
