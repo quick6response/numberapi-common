@@ -12,7 +12,7 @@ export interface OrganizationCreateDtoInterface {
 
 export interface OrganizationUpdateDtoInterface {
   prevValue: OrganizationDtoInterface;
-  newValue: OrganizationDtoInterface;
+  nextValue: OrganizationDtoInterface;
   date: number;
 }
 
