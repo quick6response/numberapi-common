@@ -19,10 +19,14 @@ export interface OrganizationUpdateDtoInterface {
 export interface OrganizationCreateErrorDtoInterface {
   message: string | unknown;
   date: number;
+  // какие данные пытаемся записать
+  value: Omit<OrganizationDtoInterface, 'id'>;
 }
 
 export interface OrganizationUpdateErrorDtoInterface {
   organizationId: number;
   message: string | unknown;
   date: number;
+  // какие данные пытаемся записать
+  value: OrganizationDtoInterface;
 }
