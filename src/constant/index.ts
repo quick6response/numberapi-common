@@ -1,3 +1,3 @@
-export * from './main';
+export * from './microservices.event.constant';
 export * from './platform.constant';
-export * from './rabbitmq.queue.config';
+export * from './rabbitmq.queue.constant';

@@ -1,3 +1,3 @@
-export class Utills {
+export class Utils {
   getRoleName(role: number) {}
 }
