@@ -1,4 +1,4 @@
-import { ClientPlatformEnum } from '@constant/platform.constant';
+import { ClientPlatform } from '@constant/platform.constant';
 
 export enum UserRoleEnum {
   User = 'user',
@@ -27,6 +27,6 @@ export interface User {
 export interface UserAuthAttachedSocialNetworks {
   id: number;
   name: string;
-  clientPlatform: ClientPlatformEnum;
+  clientPlatform: ClientPlatform;
   userId: User['id'];
 }

@@ -1,5 +1,8 @@
+import { CommentNumberStatus } from '@constant/comment.number.status.constant';
+
 /**
  * Статусы комментариев к номерам
+ * @deprecated Будет удалено в версии 2.0.0 Используйте CommentNumberStatus из файла constant
  */
 export enum CommentStatusEnum {
   // модерация
@@ -17,7 +20,7 @@ export interface CommentNumber {
   userId: number;
   text: string;
   isAnon: boolean;
-  status: CommentStatusEnum;
+  status: CommentNumberStatus;
   createdAt: Date;
   updatedAt: Date;
 }
