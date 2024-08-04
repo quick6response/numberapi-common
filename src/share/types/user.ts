@@ -1,11 +1,4 @@
-import { ClientPlatform } from '@constant/platform.constant';
-
-export enum UserRoleEnum {
-  User = 'user',
-  Admin = 'admin',
-  Donut = 'donut',
-  Helper = 'helper',
-}
+import { ClientPlatform, UserRole } from '@constant';
 
 /**
  * Информация о пользователе передаваемая в сервис для уведомлений
@@ -13,12 +6,12 @@ export enum UserRoleEnum {
 export interface User {
   id: number;
   /**
-   * @deprecated Скоро будет удалено, после введения множественной авторизации на разных платформах
+   * @deprecated Будет удалено, после введения множественной авторизации на разных платформах.
    */
   idVk: number;
   lastName: string;
   firstName: string;
-  role: UserRoleEnum;
+  role: UserRole;
 }
 
 /**
