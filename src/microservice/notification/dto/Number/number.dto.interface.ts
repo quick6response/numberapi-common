@@ -1,4 +1,4 @@
-import { ParameterClientInfoActionEventAllPlatformInterface } from '@microservice/notification';
+import type { ParameterClientInfoActionEventAllPlatformInterface } from '@microservice/notification';
 import type { NumberEssence, User } from '@share/types';
 import type { OrganizationDtoInterface } from '../Organization';
 
