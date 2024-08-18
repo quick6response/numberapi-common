@@ -1,13 +1,32 @@
+import { Organization } from '@share';
+
+// информация об организации приходящей с сервисов
 export interface OrganizationDtoInterface {
-  id: number;
-  name: string;
-  photo: string;
-  site: string;
+  id: Organization['id'];
+  name: Organization['name'];
+  site: Organization['site'];
+  description: Organization['description'];
+  typeId: Organization['typeId'];
+  type: {
+    id: Organization['type']['id'];
+    name: Organization['type']['name'];
+    nameEn: Organization['type']['nameEn'];
+  } | null;
+  photoId: Organization['photoId'];
+  photo: {
+    id: Organization['photo']['id'];
+    name: Organization['photo']['name'];
+    path: Organization['photo']['path'];
+    size: Organization['photo']['size'];
+    type: Organization['photo']['type'];
+  } | null;
+  createdAt: Organization['createdAt'];
+  updatedAt: Organization['updatedAt'];
 }
 
 export interface OrganizationCreateDtoInterface {
-  date: number;
   organization: OrganizationDtoInterface;
+  date: number;
 }
 
 export interface OrganizationUpdateDtoInterface {
@@ -18,15 +37,16 @@ export interface OrganizationUpdateDtoInterface {
 
 export interface OrganizationCreateErrorDtoInterface {
   message: string | unknown;
-  date: number;
-  // какие данные пытаемся записать
+  // какие данные пытались записать
   value: Omit<OrganizationDtoInterface, 'id'>;
+  date: number;
 }
 
 export interface OrganizationUpdateErrorDtoInterface {
   organizationId: number;
-  message: string | unknown;
-  date: number;
   // какие данные пытаемся записать
   value: OrganizationDtoInterface;
+  // текст ошибки
+  message: string | unknown;
+  date: number;
 }
