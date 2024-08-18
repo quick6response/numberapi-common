@@ -38,7 +38,11 @@ export type NumberOrganizationPinDto = {
     number: NumberEssence['number'];
     numberId: NumberEssence['id'];
   };
-  organization: OrganizationDtoInterface;
+  organization: {
+    id: OrganizationDtoInterface['id'];
+    name: OrganizationDtoInterface['name'];
+    site: OrganizationDtoInterface['site'];
+  };
   status: 'create' | 'update';
   date: number;
 };
