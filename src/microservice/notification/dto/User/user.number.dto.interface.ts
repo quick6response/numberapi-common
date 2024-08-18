@@ -1,4 +1,4 @@
-import { NumberEssence, User } from '@share/types';
+import type { NumberEssence, User } from '@share/types';
 
 export interface UserAnotherFindNumberDtoInterface {
   // номер, который вызвал триггер с привязкой

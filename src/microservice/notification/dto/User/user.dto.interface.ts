@@ -1,4 +1,4 @@
-import { UserVk, User } from '@share/types';
+import type { UserVk, User } from '@share/types';
 
 export interface UserDtoInterface extends User {}
 

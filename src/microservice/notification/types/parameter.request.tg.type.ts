@@ -1,7 +1,7 @@
-import { ClientPlatformEnum } from '@constant/platform.constant';
+import { ClientPlatform } from '@share';
 import { ParameterRequestActionInterface } from '@microservice/notification/types/parameter.request.action.type';
 
-interface ClientInfoTg {
+interface TGClientInfoUser {
   tg_user_id: number;
   ip: string;
   userAgent: string;
@@ -12,8 +12,6 @@ interface ClientInfoTg {
  */
 export interface ParameterRequestTelegramUserEventInterface
   extends ParameterRequestActionInterface<
-    ClientInfoTg,
-    ClientPlatformEnum.TELEGRAM
-  > {
-  // информация о пользователе из строки запуска и дополнительные параметры
-}
+    TGClientInfoUser,
+    ClientPlatform.TELEGRAM
+  > {}

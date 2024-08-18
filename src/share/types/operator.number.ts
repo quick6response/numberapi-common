@@ -1,4 +1,4 @@
-export interface Operator {
+export interface OperatorNumber {
   id: number;
   name: string;
   description: string | null;

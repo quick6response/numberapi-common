@@ -1,4 +1,4 @@
-import { ParameterClientInfoActionEventAllPlatformInterface } from '@microservice/notification/types/parameter.client.info.type';
+import type { ParameterClientInfoActionEventAllPlatformInterface } from '@microservice/notification';
 import type { User } from '@share/types';
 
 export interface AuthLoginDto

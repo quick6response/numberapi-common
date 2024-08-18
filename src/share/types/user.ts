@@ -1,4 +1,4 @@
-import { ClientPlatform, UserRole } from '@constant';
+import { ClientPlatform, UserRole } from '@share/constant';
 
 /**
  * Информация о пользователе передаваемая в сервис для уведомлений
@@ -6,7 +6,7 @@ import { ClientPlatform, UserRole } from '@constant';
 export interface User {
   id: number;
   /**
-   * @deprecated Будет удалено, после введения множественной авторизации на разных платформах.
+   * Будет удалено, после введения множественной авторизации на разных платформах.
    */
   idVk: number;
   lastName: string;
@@ -16,10 +16,11 @@ export interface User {
 
 /**
  * Привязанные социальные сети к пользователю
+ * Это наработки и может изменяется в будущем
  */
-export interface UserAuthAttachedSocialNetworks {
+export interface UserAttachedSocialNetworks {
   id: number;
   name: string;
-  clientPlatform: ClientPlatform;
+  platform: ClientPlatform;
   userId: User['id'];
 }

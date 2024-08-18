@@ -1,7 +1,7 @@
-import { ClientPlatformEnum } from '@constant/platform.constant';
+import { ClientPlatform } from '@share';
 import { ParameterRequestActionInterface } from '@microservice/notification/types/parameter.request.action.type';
 
-interface ClientInfoVk {
+interface VKClientInfoUser {
   vk_access_token_settings: string;
   vk_app_id: number;
   vk_are_notifications_enabled: number;
@@ -21,6 +21,6 @@ interface ClientInfoVk {
  * Данные приходящие с сервиса АПИ после действия пользователя в системе в ВК
  */
 export interface ParameterRequestVkUserEventInterface
-  extends ParameterRequestActionInterface<ClientInfoVk, ClientPlatformEnum.VK> {
+  extends ParameterRequestActionInterface<VKClientInfoUser, ClientPlatform.VK> {
   // информация о пользователе из строки запуска и дополнительные параметры
 }

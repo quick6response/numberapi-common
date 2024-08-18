@@ -1,4 +1,4 @@
-import { User } from '@share/types';
+import type { User } from '@share/types';
 
 export interface DonutSubscriptionIssuanceDtoInterface {
   userId: User['id'];

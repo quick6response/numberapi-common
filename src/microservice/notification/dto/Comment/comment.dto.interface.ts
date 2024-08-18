@@ -1,6 +1,5 @@
-import { ParameterClientInfoActionEventAllPlatformInterface } from '@microservice/notification/types/parameter.client.info.type';
-import { CommentNumber, NumberEssence } from '@share';
-import type { UserDtoInterface } from '../User';
+import type { ParameterClientInfoActionEventAllPlatformInterface } from '@microservice/notification/types/parameter.client.info.type';
+import type { CommentNumber, NumberEssence } from '@share';
 
 export interface CommentDtoInterface extends Omit<CommentNumber, 'id'> {
   commentId: CommentNumber['id'];
@@ -32,11 +31,6 @@ export interface CommentEditDto
 
 export interface CommentNumberModerateDto
   extends ParameterClientInfoActionEventAllPlatformInterface {
-  // информация о том кто выполнил действие
-  /**
-   * @deprecated Используйте поле user
-   */
-  userInfo?: Omit<UserDtoInterface, 'numberUserId'>;
   // комментарий
   comment: CommentDtoInterface & { prevStatus: CommentDtoInterface['status'] };
   date: number;

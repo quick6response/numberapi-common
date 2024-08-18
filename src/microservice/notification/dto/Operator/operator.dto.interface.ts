@@ -1,14 +1,8 @@
-export interface OperatorDtoInterface {
-  id: number;
-  name: string;
-  photo: string;
-  description?: string;
-  foundingDate?: string;
-}
+import { OperatorNumber } from '@share';
 
 export interface OperatorCreateDtoInterface {
   date: number;
-  operator: OperatorDtoInterface;
+  operator: OperatorNumber;
 }
 
 // todo рассмотреть вариант с уведомлением о изменение операторов, если такие могу быть

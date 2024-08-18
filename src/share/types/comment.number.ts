@@ -1,4 +1,4 @@
-import { CommentNumberStatus } from '@constant/comment.number.status.constant';
+import { CommentNumberStatus } from '@share/constant';
 
 /**
  * Статусы комментариев к номерам
