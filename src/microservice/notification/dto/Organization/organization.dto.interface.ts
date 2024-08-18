@@ -15,10 +15,7 @@ export interface OrganizationDtoInterface {
   photoId: Organization['photoId'];
   photo: {
     id: Organization['photo']['id'];
-    name: Organization['photo']['name'];
-    path: Organization['photo']['path'];
-    size: Organization['photo']['size'];
-    type: Organization['photo']['type'];
+    link: Organization['photo']['link'];
   } | null;
   createdAt: Organization['createdAt'];
   updatedAt: Organization['updatedAt'];

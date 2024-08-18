@@ -1,9 +1,22 @@
 export interface File {
   id: number;
+
+  hash: string;
+
   name: string;
-  path: string;
-  size: number;
-  type: string;
+
+  fileType: string;
+
+  link: string | null;
+
+  path: string | null;
+
+  storageUpload: string;
+
+  // может не быть
+  userId: number | null;
+
   createdAt: Date;
+
   updatedAt: Date;
 }
