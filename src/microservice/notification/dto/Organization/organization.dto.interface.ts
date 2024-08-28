@@ -32,17 +32,25 @@ export interface OrganizationUpdateDtoInterface {
   date: number;
 }
 
+type OrganizationErrorValueType =
+  | (Pick<OrganizationDtoInterface, 'name' | 'site' | 'description'> & {
+      photo: { link: string; name: string };
+    })
+  | { name: string; site: string; photo: { link: string; name: string } }
+  | Omit<OrganizationDtoInterface, 'id'>
+  | { [key: string]: unknown };
+
 export interface OrganizationCreateErrorDtoInterface {
   message: string | unknown;
   // какие данные пытались записать
-  value: Omit<OrganizationDtoInterface, 'id'>;
+  value: OrganizationErrorValueType;
   date: number;
 }
 
 export interface OrganizationUpdateErrorDtoInterface {
   organizationId: number;
   // какие данные пытаемся записать
-  value: OrganizationDtoInterface;
+  value: OrganizationErrorValueType;
   // текст ошибки
   message: string | unknown;
   date: number;
