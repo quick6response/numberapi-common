@@ -60,7 +60,7 @@ export const NotificationEventConstant = {
   /**
    * Обновление организации
    */
-  organization_update_error: 'organization_update_update_error',
+  organization_update_error: 'organization_update_error',
 
   /**
    * Прикрепление организации к номеру
