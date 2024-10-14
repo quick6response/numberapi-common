@@ -1,4 +1,4 @@
-import {
+import type {
   OrganizationDtoInterface,
   ParameterClientInfoActionEventAllPlatformInterface,
 } from '@microservice/notification';
