@@ -1,11 +1,12 @@
-import { NotificationEventConstant } from './notification.event.constant';
+import { NotificationEventConstant } from '@share/constant/notification.event.constant';
+import { MainMessageConstant } from '@share/constant/main.message.constant';
 
 /**
  * То какие уведомления можно отравить в очереди событий rabbitmq
  */
 export const MicroservicesEventConstant = {
   notification: NotificationEventConstant,
-  mainServiceApi: {},
+  mainServiceApi: MainMessageConstant,
 } as const;
 
 /**
