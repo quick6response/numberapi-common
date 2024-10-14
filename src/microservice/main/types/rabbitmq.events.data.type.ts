@@ -1,9 +1,9 @@
-import { MicroservicesEventConstant } from '@share';
 import type {
-  DonutSubscriptionExpiredDtoInterface,
-  DonutSubscriptionIssuanceDtoInterface,
-  DonutSubscriptionProlongedDtoInterface,
-} from '@microservice/notification/dto';
+  DonutCreateDtoInterface,
+  DonutExpiredInterface,
+  DonutProlongedInterface,
+} from '@microservice/main';
+import { MicroservicesEventConstant } from '@share';
 
 export type RabbitmqMainMessageKey =
   keyof typeof MicroservicesEventConstant.mainServiceApi.message;
@@ -12,7 +12,7 @@ export type RabbitmqMainMessageKey =
  * События, которые принимает микросервис по работе с уведомлениями
  */
 export type RabbitmqMainMessages = {
-  donutCreate: DonutSubscriptionIssuanceDtoInterface;
-  donutProlonged: DonutSubscriptionProlongedDtoInterface;
-  donutExpired: DonutSubscriptionExpiredDtoInterface;
+  donutCreate: DonutCreateDtoInterface;
+  donutProlonged: DonutProlongedInterface;
+  donutExpired: DonutExpiredInterface;
 };
