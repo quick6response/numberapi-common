@@ -2,15 +2,15 @@ export interface DonutCreateDtoInterface {
   userId: number;
   amount: number;
   amountWithoutFee: number;
-  json: string;
+  json: NonNullable<unknown>;
 }
 
 export interface DonutProlongedInterface {
   userId: number;
-  json: string;
+  json: NonNullable<unknown>;
 }
 
 export interface DonutExpiredInterface {
   userId: number;
-  json: string;
+  json: NonNullable<unknown>;
 }
