@@ -1,15 +1,15 @@
 export const MainMessageConstant = {
   message: {
     // пользователь оформил подписку ВК Донут
-    donutCreate: 'donut.create',
+    donutCreate: 'donutCreate',
     // пользователь продлил подписку
-    donutProlonged: 'donut.prolonged',
+    donutProlonged: 'donutProlonged',
     // подписка истекла
-    donutExpired: 'donut.expired',
+    donutExpired: 'donutExpired',
     // пользователь отменил подписку
-    donutCancelled: 'donut.cancelled',
+    donutCancelled: 'donutCancelled',
     // пользователь изменил цену
-    donutChangePrice: 'donut.changePrice',
+    donutChangePrice: 'donutChangePrice',
   },
   event: {},
 } as const;
