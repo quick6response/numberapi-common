@@ -1,7 +1,9 @@
 import type {
   DonutCreateDtoInterface,
-  DonutExpiredInterface,
-  DonutProlongedInterface,
+  DonutExpiredDtoInterface,
+  DonutPriceChangeDtoInterface,
+  DonutProlongedDtoInterface,
+  DonutCancelDtoInterface,
 } from '@microservice/main';
 import { MicroservicesEventConstant } from '@share';
 
@@ -13,6 +15,8 @@ export type RabbitmqMainMessageKey =
  */
 export type RabbitmqMainMessages = {
   donutCreate: DonutCreateDtoInterface;
-  donutProlonged: DonutProlongedInterface;
-  donutExpired: DonutExpiredInterface;
+  donutProlonged: DonutProlongedDtoInterface;
+  donutExpired: DonutExpiredDtoInterface;
+  donutChangePrice: DonutPriceChangeDtoInterface;
+  donutCancelled: DonutCancelDtoInterface;
 };
