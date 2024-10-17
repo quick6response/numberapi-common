@@ -75,7 +75,7 @@ export const NotificationEventConstant = {
   /**
    * Остановка сервиса АПИ
    */
-  service_api_stop: 'service_api_start',
+  service_api_stop: 'service_api_stop',
 
   /**
    * Модерация комментария
