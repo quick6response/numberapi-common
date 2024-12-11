@@ -4,11 +4,12 @@ export interface UserAnotherFindNumberDtoInterface {
   // номер, который вызвал триггер с привязкой
   number: NumberEssence['number'];
   numberId: NumberEssence['id'];
+  // поиск анонимный
   isAnon: boolean;
+  // заблокирован ли просмотр информации о номере
   isBlock: boolean;
   // айди пользователя чей номер телефона
   userId: User['id'];
-  // todo под разные платформы должен быть разный формат айди пользователя или другая инфорация о том, кому информацию отправить
-  userVkId: number;
+  userVkId: User['idVk'];
   date: number;
 }
