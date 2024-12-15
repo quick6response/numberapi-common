@@ -4,7 +4,7 @@
   "description": "",
   "private": false,
   "scripts": {
-    "build": "rm -rf dist && tsc && && tsc -p tsconfig.types.json && cp package.json dist/package.json",
+    "build": "rm -rf dist && tsc && tsc -p tsconfig.types.json && cp package.json dist/package.json",
     "postbuild": "tsc-alias -v --dir dist -p tsconfig.json",
     "ts-alias": "tsc-alias -v --dir dist -p tsconfig.json"
   },
