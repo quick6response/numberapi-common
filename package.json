@@ -4,8 +4,8 @@
   "description": "",
   "private": false,
   "scripts": {
-    "build": "rm -rf dist && tsc && npm run ts-alias",
-    "prepublishOnly": "npm run build && npm run ts-alias",
+    "build": "rm -rf dist && tsc && && tsc -p tsconfig.types.json && cp package.json dist/package.json",
+    "postbuild": "tsc-alias -v --dir dist -p tsconfig.json",
     "ts-alias": "tsc-alias -v --dir dist -p tsconfig.json"
   },
   "main": "dist/index.js",
