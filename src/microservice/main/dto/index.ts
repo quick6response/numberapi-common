@@ -1,1 +1,1 @@
-export * from './Donut';
+export * from './donut.dto.interface';
