@@ -53,10 +53,10 @@
   },
   "typesVersions": {
     "*": {
-      "share": ["./dist/share/index.js"],
-      "notification": ["./dist/microservice/notification/index.js"],
-      "api": ["./dist/microservice/api/index.js"],
-      "*": ["./dist/index.js"]
+      "share": ["./dist/share/index.d.ts"],
+      "notification": ["./dist/microservice/notification/index.d.ts"],
+      "api": ["./dist/microservice/api/index.d.ts"],
+      "*": ["./dist/index.d.ts"]
     }
   }
 }
