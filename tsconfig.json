@@ -19,10 +19,6 @@
       "@microservice/*": ["./microservice/*"]
     }
   },
-  "ts-node": {
-    // Do not forget to `npm i -D tsconfig-paths`
-    "require": ["tsconfig-paths/register"]
-  },
   "include": ["src", ".eslintrc.js"],
   "exclude": ["node_modules", "dist"]
 }
