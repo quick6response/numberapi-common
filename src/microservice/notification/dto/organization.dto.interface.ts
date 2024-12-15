@@ -1,4 +1,4 @@
-import { Organization } from '@share';
+import { Organization, OrganizationType, File } from '@share';
 
 // информация об организации приходящей с сервисов
 export interface OrganizationDtoInterface {
@@ -8,14 +8,14 @@ export interface OrganizationDtoInterface {
   description: Organization['description'];
   typeId: Organization['typeId'];
   type: {
-    id: Organization['type']['id'];
-    name: Organization['type']['name'];
-    nameEn: Organization['type']['nameEn'];
+    id: OrganizationType['id'];
+    name: OrganizationType['name'];
+    nameEn: OrganizationType['nameEn'];
   } | null;
   photoId: Organization['photoId'];
   photo: {
-    id: Organization['photo']['id'];
-    link: Organization['photo']['link'];
+    id: File['id'];
+    link: File['link'];
   } | null;
   createdAt: Organization['createdAt'];
   updatedAt: Organization['updatedAt'];

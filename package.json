@@ -1,6 +1,6 @@
 {
-  "name": "@quick_response/number_api_event",
-  "version": "1.7.0",
+  "name": "microservices",
+  "version": "1.8.0",
   "description": "",
   "private": false,
   "scripts": {
@@ -8,13 +8,16 @@
     "prepublishOnly": "npm run build && npm run ts-alias",
     "ts-alias": "tsc-alias -v --dir dist -p tsconfig.json"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist",
+    "package.json",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/quick6response/number_api_event.git"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
   },
   "keywords": [
     "typescript",
@@ -23,45 +26,6 @@
   ],
   "author": "quick6response",
   "license": "MIT",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    "./constant": {
-      "import": "./dist/constant/index.mjs",
-      "require": "./dist/constant/index.js",
-      "types": "./dist/constant/index.d.ts"
-    },
-    "./share": {
-      "import": "./dist/share/index.mjs",
-      "require": "./dist/share/index.js",
-      "types": "./dist/share/index.d.ts"
-    },
-    "./microservice": {
-      "import": "./dist/microservice/index.mjs",
-      "require": "./dist/microservice/index.js",
-      "types": "./dist/microservice/index.d.ts"
-    },
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./package.json": "./package.json"
-  },
-  "lint-staged": {
-    "**/*.ts": [
-      "prettier --ignore-path ./.prettierignore --write"
-    ],
-    "packages/**/*.json": [
-      "prettier --ignore-path ./.prettierignore --write"
-    ]
-  },
-  "engines": {
-    "node": ">= 16"
-  },
   "devDependencies": {
     "@types/node": "^20.16.11",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
@@ -75,6 +39,20 @@
     "eslint-plugin-unicorn": "^51.0.1",
     "prettier": "^3.3.3",
     "tsc-alias": "^1.8.10",
-    "typescript": "^5.6.3"
+    "typescript": "^5.5.4"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./share": "./dist/share/index.js",
+    "./notification": "./dist/microservice/notification/index.js",
+    "./api": "./dist/microservice/api/index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "share": ["./dist/share/index.js"],
+      "notification": ["./dist/microservice/notification/index.js"],
+      "api": ["./dist/microservice/api/index.js"],
+      "*": ["./dist/index.js"]
+    }
   }
 }

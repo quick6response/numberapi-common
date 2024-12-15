@@ -1,31 +1,24 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "noImplicitAny": true,
-    "noUnusedLocals": false,
-    "removeComments": false,
-    "noLib": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "useUnknownInCatchVariables": true,
     "target": "ES2021",
-    "sourceMap": true,
-    "allowJs": true,
+    "module": "CommonJS",
+    "declaration": true,
     "outDir": "dist",
     "baseUrl": "./src",
     "rootDir": "./src",
-    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
     "paths": {
       "@share": ["./share"],
       "@share/*": ["./share/*"],
-      
-      "@constant": ["./constant"],
-      "@constant/*": ["./constant/*"],
       
       "@microservice": ["./microservice"],
       "@microservice/*": ["./microservice/*"]
     }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src", ".eslintrc.js"],
+  "exclude": ["node_modules", "dist"]
 }

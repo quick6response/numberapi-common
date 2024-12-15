@@ -4,7 +4,7 @@ import type {
   DonutPriceChangeDtoInterface,
   DonutProlongedDtoInterface,
   DonutCancelDtoInterface,
-} from '@microservice/main';
+} from '@microservice/api';
 import { MicroservicesEventConstant } from '@share';
 
 export type RabbitmqMainMessageKey =
