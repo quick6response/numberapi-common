@@ -1,6 +1,6 @@
 {
-  "name": "microservice",
-  "version": "1.8.1",
+  "name": "@numberapi/microservices",
+  "version": "1.8.2",
   "description": "",
   "private": true,
   "scripts": {
