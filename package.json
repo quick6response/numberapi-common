@@ -6,7 +6,11 @@
   "scripts": {
     "build": "rm -rf dist && tsc && tsc -p tsconfig.types.json && cp package.json dist/package.json",
     "postbuild": "tsc-alias -v --dir dist -p tsconfig.json",
-    "ts-alias": "tsc-alias -v --dir dist -p tsconfig.json"
+    "ts-alias": "tsc-alias -v --dir dist -p tsconfig.json",
+    "build-interfaces": "tsc --emitDeclarationOnly",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint . --fix"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
