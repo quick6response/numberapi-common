@@ -1,1 +1,4 @@
-[![Publish Package to npmjs](https://github.com/quick6response/number_api_event/actions/workflows/publish.yml/badge.svg)](https://github.com/quick6response/number_api_event/actions/workflows/publish.yml)
+Иерархия папок сделана под каждый сервис/микросервис.
+
+Если нам нужно описать приходящие события для микросервиса уведомления, то мы создаем его если нет.
+Если уже есть микросервис, то находим нужный класс dto, если нет, создаем. И называем интерфейс имением действия в системе. 
