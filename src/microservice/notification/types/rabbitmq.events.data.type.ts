@@ -22,13 +22,23 @@ import type {
   UserUpdateDtoInterface,
 } from '@microservice/notification/dto';
 
-export type RabbitmqNotificationEventKey =
+/**
+ * @deprecated используйте RabbitMQNotificationEventKeys
+ */
+export type RabbitmqNotificationEventsKey = RabbitNotificationEventsKeys;
+
+export type RabbitNotificationEventsKeys =
   keyof typeof MicroservicesEventConstant.notification;
+
+/**
+ * @deprecated используйте RabbitmqNotificationEventsDtoData
+ */
+export type RabbitmqNotificationEvents = RabbitmqNotificationEventsDtoData;
 
 /*
  * События, которые принимает микросервис по работе с уведомлениями
  */
-export type RabbitmqNotificationEvents = {
+export type RabbitmqNotificationEventsDtoData = {
   /**
    * Авторизация пользователя в ВК
    */

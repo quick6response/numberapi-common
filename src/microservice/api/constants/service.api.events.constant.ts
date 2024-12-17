@@ -1,5 +1,7 @@
-export const MainMessageConstant = {
-  message: {
+export const ServiceApiEventsConstant = {
+  messages: {},
+  // прослушиваемые события
+  events: {
     // пользователь оформил подписку ВК Донут
     donutCreate: 'donutCreate',
     // пользователь продлил подписку
@@ -11,5 +13,4 @@ export const MainMessageConstant = {
     // пользователь изменил цену
     donutChangePrice: 'donutChangePrice',
   },
-  event: {},
 } as const;

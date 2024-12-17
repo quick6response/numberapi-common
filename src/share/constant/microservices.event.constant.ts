@@ -1,12 +1,17 @@
-import { NotificationEventConstant } from '@share/constant/notification.event.constant';
-import { MainMessageConstant } from '@share/constant/main.message.constant';
+import { ServiceApiEventsConstant } from '@microservice/api/constants/service.api.events.constant';
+import { NotificationEventConstant } from '@microservice/notification/constants/notification.event.constant';
 
 /**
  * То какие уведомления можно отравить в очереди событий rabbitmq
  */
 export const MicroservicesEventConstant = {
   notification: NotificationEventConstant,
-  mainServiceApi: MainMessageConstant,
+  /**
+   * @deprecated Использовать api
+   * todo удалить в 2.0.0
+   */
+  mainServiceApi: ServiceApiEventsConstant,
+  api: ServiceApiEventsConstant,
 } as const;
 
 /**
