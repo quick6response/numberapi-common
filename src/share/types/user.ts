@@ -5,13 +5,11 @@ import { ClientPlatform, UserRole } from '@share/constant';
  */
 export interface User {
   id: number;
-  /**
-   * Будет удалено, после введения множественной авторизации на разных платформах.
-   */
   idVk: number;
   lastName: string;
   firstName: string;
   role: UserRole;
+  donut: boolean;
 }
 
 /**
