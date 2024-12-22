@@ -15,7 +15,7 @@ export interface UserCreateDtoInterface {
 }
 
 export interface UserUpdateDtoInterface {
-  preValue: UserDtoInterface;
+  prevValue: UserDtoInterface;
   nextValue: UserDtoInterface;
   date: number;
   reason?: string;
