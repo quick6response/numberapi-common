@@ -27,7 +27,7 @@ export interface NumberFindDto
 
 // ошибка в поиске номера
 export type NumberFindErrorDto = {
-  errorText: unknown;
+  errorText: string;
 } & NumberFindDto;
 
 /**
