@@ -106,4 +106,9 @@ export const NotificationEventConstant = {
    * Изменение пользователя
    */
   user_edit: 'user_edit',
+
+  /**
+   * Привязка оператора к оператору из системы интеграции
+   */
+  operator_bind_integration: 'operator_bind_integration',
 } as const;

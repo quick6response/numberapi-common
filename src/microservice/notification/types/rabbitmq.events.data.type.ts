@@ -1,5 +1,5 @@
 import { MicroservicesEventConstant } from '@share';
-import type {
+import {
   AuthLoginDto,
   AuthRegistrationDto,
   CommentCreateDto,
@@ -12,6 +12,7 @@ import type {
   NumberFindDto,
   NumberFindErrorDto,
   NumberOrganizationPinDto,
+  OperatorBindIntegrationDtoInterface,
   OperatorCreateDtoInterface,
   OrganizationCreateDtoInterface,
   OrganizationCreateErrorDtoInterface,
@@ -22,18 +23,8 @@ import type {
   UserUpdateDtoInterface,
 } from '@microservice/notification/dto';
 
-/**
- * @deprecated используйте RabbitMQNotificationEventKeys
- */
-export type RabbitmqNotificationEventsKey = RabbitNotificationEventsKeys;
-
 export type RabbitNotificationEventsKeys =
   keyof typeof MicroservicesEventConstant.notification;
-
-/**
- * @deprecated используйте RabbitmqNotificationEventsDtoData
- */
-export type RabbitmqNotificationEvents = RabbitmqNotificationEventsDtoData;
 
 /*
  * События, которые принимает микросервис по работе с уведомлениями
@@ -131,4 +122,9 @@ export type RabbitmqNotificationEventsDtoData = {
    * Изменение пользователя
    */
   user_edit: UserUpdateDtoInterface;
+
+  /**
+   * Привязка оператора к оператору из системы интеграции
+   */
+  operator_bind_integration: OperatorBindIntegrationDtoInterface;
 };
