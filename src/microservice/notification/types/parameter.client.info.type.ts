@@ -1,6 +1,6 @@
 import type { ParameterRequestTelegramUserEventInterface } from '@microservice/notification/types/parameter.request.tg.type';
 import type { ParameterRequestVkUserEventInterface } from '@microservice/notification/types/parameter.request.vk.type';
-import { ClientPlatform, User } from '@share';
+import { ClientPlatform } from '@share';
 
 // множество разных интерфейсов, которые написаны под разные платформы
 
@@ -8,6 +8,9 @@ import { ClientPlatform, User } from '@share';
 export type ParameterClientInfoActionEventAllPlatform =
   ParameterRequestVkUserEventInterface;
 
+export interface ParameterClientInfoActionEventUserDataInterface {
+  userId: number;
+}
 /**
  * Интерфейс со всеми платформами и платформами
  */
@@ -18,7 +21,7 @@ export interface ParameterClientInfoActionEventAllPlatformInterface {
   clientPlatform:
     | ParameterRequestVkUserEventInterface['clientPlatform']
     | ParameterRequestTelegramUserEventInterface['clientPlatform'];
-  user?: User;
+  user?: ParameterClientInfoActionEventUserDataInterface;
   date: number;
 }
 

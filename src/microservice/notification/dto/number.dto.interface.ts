@@ -18,11 +18,6 @@ export interface NumberFindDto
     numberId: NumberEssence['id'];
   };
   status: StatusFindNumber;
-  /**
-   * @deprecated Используйте поле user
-   * // todo удалить в версии 2.0.0
-   */
-  userId?: User['id'];
 }
 
 // ошибка в поиске номера
