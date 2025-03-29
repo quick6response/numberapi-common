@@ -111,4 +111,14 @@ export const NotificationEventConstant = {
    * Привязка оператора к оператору из системы интеграции
    */
   operator_bind_integration: 'operator_bind_integration',
+
+  /**
+   * Крон задача успешно завершила обновление номера
+   */
+  number_schedule_updated_success: 'number_schedule_updated_success',
+
+  /**
+   * Крон задача обновление номера завершилась с ошибкой
+   */
+  number_schedule_updated_error: 'number_schedule_updated_error',
 } as const;

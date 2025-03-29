@@ -41,3 +41,24 @@ export type NumberOrganizationPinDto = {
   status: 'create' | 'update';
   date: number;
 };
+
+/**
+ * Обновление информации о номере кнон задачей закончено успешно
+ */
+export interface NumberScheduleUpdateSuccessDto {
+  number: string;
+  numberId: number;
+}
+
+/**
+ * Обновление информации о номере кнон задачей закончено с ошибкой
+ */
+export interface NumberScheduleUpdateErrorDto {
+  number: string;
+  numberId: number;
+  // количество ошибок, с учетом текущей
+  countError: number;
+  // максимальное количество ошибок
+  maxCountError: number;
+  errorText: string;
+}
