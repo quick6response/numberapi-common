@@ -12,6 +12,8 @@ import {
   NumberFindDto,
   NumberFindErrorDto,
   NumberOrganizationPinDto,
+  NumberScheduleUpdatedErrorDto,
+  NumberScheduleUpdatedSuccessDto,
   OperatorBindIntegrationDtoInterface,
   OperatorCreateDtoInterface,
   OrganizationCreateDtoInterface,
@@ -127,4 +129,14 @@ export type RabbitmqNotificationEventsDtoData = {
    * Привязка оператора к оператору из системы интеграции
    */
   operator_bind_integration: OperatorBindIntegrationDtoInterface;
+
+  /**
+   * Крон задача успешно завершила обновление номера
+   */
+  number_schedule_updated_success: NumberScheduleUpdatedSuccessDto;
+
+  /**
+   * Крон задача обновление номера завершилась с ошибкой
+   */
+  number_schedule_updated_error: NumberScheduleUpdatedErrorDto;
 };
