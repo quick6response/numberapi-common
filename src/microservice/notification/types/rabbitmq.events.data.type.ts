@@ -12,8 +12,8 @@ import {
   NumberFindDto,
   NumberFindErrorDto,
   NumberOrganizationPinDto,
-  NumberScheduleUpdateErrorDto,
-  NumberScheduleUpdateSuccessDto,
+  NumberScheduleUpdatedErrorDto,
+  NumberScheduleUpdatedSuccessDto,
   OperatorBindIntegrationDtoInterface,
   OperatorCreateDtoInterface,
   OrganizationCreateDtoInterface,
@@ -133,10 +133,10 @@ export type RabbitmqNotificationEventsDtoData = {
   /**
    * Крон задача успешно завершила обновление номера
    */
-  number_schedule_updated_success: NumberScheduleUpdateSuccessDto;
+  number_schedule_updated_success: NumberScheduleUpdatedSuccessDto;
 
   /**
    * Крон задача обновление номера завершилась с ошибкой
    */
-  number_schedule_updated_error: NumberScheduleUpdateErrorDto;
+  number_schedule_updated_error: NumberScheduleUpdatedErrorDto;
 };

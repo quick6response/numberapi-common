@@ -45,7 +45,7 @@ export type NumberOrganizationPinDto = {
 /**
  * Обновление информации о номере кнон задачей закончено успешно
  */
-export interface NumberScheduleUpdateSuccessDto {
+export interface NumberScheduleUpdatedSuccessDto {
   number: string;
   numberId: number;
 }
@@ -53,7 +53,7 @@ export interface NumberScheduleUpdateSuccessDto {
 /**
  * Обновление информации о номере кнон задачей закончено с ошибкой
  */
-export interface NumberScheduleUpdateErrorDto {
+export interface NumberScheduleUpdatedErrorDto {
   number: string;
   numberId: number;
   // количество ошибок, с учетом текущей
