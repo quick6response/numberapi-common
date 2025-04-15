@@ -62,3 +62,21 @@ export interface NumberScheduleUpdatedErrorDto {
   maxCountError: number;
   errorText: string;
 }
+
+/**
+ * Общее событие о завершении обновления номеров
+ */
+export interface NumberScheduleUpdatedSummaryDto {
+  // количество обработанных номеров
+  totalProcessed: number;
+  // количество обновленных номеров
+  updatedCount: number;
+  // количество накопленных ошибок
+  errorCount: number;
+  // закончено ли обновление номеров полностью
+  wasInterrupted: boolean;
+  // время завершения
+  endDate: number;
+  // время начала
+  startDate: number;
+}

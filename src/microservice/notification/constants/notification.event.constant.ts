@@ -121,4 +121,9 @@ export const NotificationEventConstant = {
    * Крон задача обновление номера завершилась с ошибкой
    */
   number_schedule_updated_error: 'number_schedule_updated_error',
+
+  /**
+   * Крон задача успешно завершила обновление номеров
+   */
+  number_schedule_updated_summary: 'number_schedule_updated_summary',
 } as const;
