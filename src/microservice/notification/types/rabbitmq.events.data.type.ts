@@ -145,4 +145,14 @@ export type RabbitmqNotificationEventsDtoData = {
    * Крон задача обновления номеров завершена
    */
   number_schedule_updated_summary: NumberScheduleUpdatedSummaryDto;
+
+  /**
+   * Крон задача успешно завершила обновление номера
+   */
+  number_schedule_created_success: NumberScheduleUpdatedSuccessDto;
+
+  /**
+   * Крон задача обновление номера завершилась с ошибкой
+   */
+  number_schedule_created_error: NumberScheduleUpdatedErrorDto;
 };

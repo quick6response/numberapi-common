@@ -80,3 +80,21 @@ export interface NumberScheduleUpdatedSummaryDto {
   // время начала
   startDate: number;
 }
+
+/**
+ * Добавление информации о номере кнон задачей закончено успешно
+ */
+export interface NumberScheduleCreatedSuccessDto {
+  number: string;
+  numberId: number;
+  siteUrl: string;
+}
+
+/**
+ * Добавление информации о номере кнон задачей закончено с ошибкой
+ */
+export interface NumberScheduleCreatedErrorDto {
+  number: string;
+  errorText: string;
+  siteUrl: string;
+}
