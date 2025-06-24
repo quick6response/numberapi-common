@@ -1,5 +1,3 @@
-import type { File } from '@share';
-
 export interface Organization {
   id: number;
   name: string;
@@ -7,8 +5,7 @@ export interface Organization {
   description: string | null;
   typeId: number | null;
   type: OrganizationType | null;
-  photoId: number | null;
-  photo: File | null;
+  photo: string | null;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -17,8 +14,8 @@ export interface OrganizationType {
   id: number;
   name: string;
   nameEn: string;
-  nameShort?: string;
-  nameShortEn?: string;
+  nameShort: string | null;
+  nameShortEn: string | null;
   createdAt: Date;
   updatedAt: Date;
 }

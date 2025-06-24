@@ -1,4 +1,4 @@
-import { Organization, OrganizationType, File } from '@share';
+import { Organization, OrganizationType } from '@share';
 
 // информация об организации приходящей с сервисов
 export interface OrganizationDtoInterface {
@@ -12,11 +12,7 @@ export interface OrganizationDtoInterface {
     name: OrganizationType['name'];
     nameEn: OrganizationType['nameEn'];
   } | null;
-  photoId: Organization['photoId'];
-  photo: {
-    id: File['id'];
-    link: File['link'];
-  } | null;
+  photo: string | null;
   createdAt: Organization['createdAt'];
   updatedAt: Organization['updatedAt'];
 }
@@ -34,9 +30,9 @@ export interface OrganizationUpdateDtoInterface {
 
 type OrganizationErrorValueType =
   | (Pick<OrganizationDtoInterface, 'name' | 'site' | 'description'> & {
-      photo: { link: string; name: string };
+      photo: string;
     })
-  | { name: string; site: string; photo: { link: string; name: string } }
+  | { name: string; site: string; photo: string }
   | Omit<OrganizationDtoInterface, 'id'>
   | { [key: string]: unknown };
 
