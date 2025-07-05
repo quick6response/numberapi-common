@@ -47,13 +47,13 @@
     "prettier": "^3.3.3"
   },
   "exports": {
-    ".": "./dist/index.js",
     "./microservice/share": "./dist/microservice/share/index.js",
     "./microservice/notification": "./dist/microservice/notification/index.js",
     "./microservice/api": "./dist/microservice/api/index.js",
     "./microservice": "./dist/microservice/index.js",
+    "./database": "./dist/database/index.js",
     "./database/postgres": "./dist/database/interfaces/postgres/index.js",
-    "./database": "./dist/database/index.js"
+    "./database/*": "./dist/database/*"
   },
   "typesVersions": {
     "*": {
@@ -61,8 +61,8 @@
       "microservice/notification": ["./dist/microservice/notification/index.d.ts"],
       "microservice/api": ["./dist/microservice/api/index.d.ts"],
       "microservice": ["./dist/microservice/index.d.ts"],
-      "database/postgres": ["./dist/database/interfaces/postgres/index.d.ts"],
-      "database": ["./dist/database/index.d.ts"]
+      "database": ["./dist/database/index.d.ts"],
+      "database/postgres": ["./dist/database/interfaces/postgres/index.d.ts"]
     }
   }
 }
