@@ -47,6 +47,7 @@
     "prettier": "^3.3.3"
   },
   "exports": {
+    ".": "./dist/index.js",
     "./microservice/share": "./dist/microservice/share/index.js",
     "./microservice/notification": "./dist/microservice/notification/index.js",
     "./microservice/api": "./dist/microservice/api/index.js",
