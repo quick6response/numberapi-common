@@ -30,7 +30,6 @@ export interface NumberCommentCreateDto
     isAnon: NumberComment['isAnon'];
     text: NumberComment['text'];
     createdAt: NumberComment['createdAt'];
-    updatedAt: NumberComment['updatedAt'];
   };
   number: {
     number: NumberEssence['number'];
