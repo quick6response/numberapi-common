@@ -51,14 +51,14 @@
     "./microservice/notification": "./dist/microservice/notification/index.js",
     "./microservice/api": "./dist/microservice/api/index.js",
     "./database": "./dist/database/index.js",
-    "./database/postgres": "./dist/database/postgres/index.js"
+    "./database/postgres": "./dist/database/interfaces/postgres/index.js"
   },
   "typesVersions": {
     "*": {
       "microservice/share": ["./dist/microservice/share/index.d.ts"],
       "microservice/notification": ["./dist/microservice/notification/index.d.ts"],
       "microservice/api": ["./dist/microservice/api/index.d.ts"],
-      "database/postgres": ["./dist/database/postgres/index.d.ts"],
+      "database/postgres": ["./dist/database/interfaces/postgres/index.d.ts"],
       "database/*": ["./dist/database/index.d.ts"],
       "database": ["./dist/database/index.d.ts"]
     }
