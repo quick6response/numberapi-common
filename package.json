@@ -46,6 +46,15 @@
     "eslint-plugin-unicorn": "^51.0.1",
     "prettier": "^3.3.3"
   },
+  "exports": {
+    ".": "./dist/index.js",
+    "./microservice/share": "./dist/microservice/share/index.js",
+    "./microservice/notification": "./dist/microservice/notification/index.js",
+    "./microservice/api": "./dist/microservice/api/index.js",
+    "./microservice": "./dist/microservice/index.js",
+    "./database/postgres": "./dist/database/interfaces/postgres/index.js",
+    "./database": "./dist/database/index.js"
+  },
   "typesVersions": {
     "*": {
       "microservice/share": ["./dist/microservice/share/index.d.ts"],
