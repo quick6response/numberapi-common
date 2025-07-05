@@ -7,7 +7,7 @@ export interface NumberCommentDtoInterface extends Omit<NumberComment, 'id'> {
   number: NumberEssence['number'];
 }
 
-export interface NumberCommentDeleteDto
+export interface NumberCommentDeletedDto
   extends ParameterClientInfoActionEventAllPlatformInterface {
   comment: {
     id: NumberComment['id'];
@@ -23,7 +23,7 @@ export interface NumberCommentDeleteDto
   };
 }
 
-export interface NumberCommentCreateDto
+export interface NumberCommentCreatedDto
   extends ParameterClientInfoActionEventAllPlatformInterface {
   comment: {
     id: NumberComment['id'];
@@ -42,7 +42,7 @@ export type NumberCommentEditChangeFields = keyof Pick<
   'isAnon' | 'text'
 >;
 
-export interface NumberCommentEditDto
+export interface NumberCommentEditedDto
   extends ParameterClientInfoActionEventAllPlatformInterface {
   commentId: NumberComment['id'];
   number: {
@@ -61,7 +61,7 @@ export interface NumberCommentEditDto
   changes: NumberCommentEditChangeFields[];
 }
 
-export interface NumberCommentModerateDto
+export interface NumberCommentModeratedDto
   extends ParameterClientInfoActionEventAllPlatformInterface {
   // комментарий
   comment: NumberCommentDtoInterface & {
