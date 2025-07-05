@@ -4,3 +4,5 @@ export enum UserRole {
   Donut = 'donut',
   Helper = 'helper',
 }
+
+export default UserRole;

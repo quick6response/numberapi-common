@@ -1,6 +1,6 @@
-import type { ParameterRequestTelegramUserEventInterface } from '@microservice/notification/types/parameter.request.tg.type';
-import type { ParameterRequestVkUserEventInterface } from '@microservice/notification/types/parameter.request.vk.type';
-import { ClientPlatform } from '@share';
+import type { ParameterRequestTelegramUserEventInterface } from '@/microservice/notification/types/parameter.request.tg.type';
+import type { ParameterRequestVkUserEventInterface } from '@/microservice/notification/types/parameter.request.vk.type';
+import { ClientPlatform } from '@/microservice/share';
 
 // множество разных интерфейсов, которые написаны под разные платформы
 

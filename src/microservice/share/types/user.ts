@@ -1,4 +1,5 @@
-import { ClientPlatform, UserRole } from '@share/constant';
+import { ClientPlatform } from '@/microservice/share/constant';
+import { UserRole } from '../../../database';
 
 /**
  * Информация о пользователе передаваемая в сервис для уведомлений

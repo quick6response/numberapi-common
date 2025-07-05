@@ -1,5 +1,5 @@
-import { ServiceApiEventsConstant } from '@microservice/api/constants/service.api.events.constant';
-import { NotificationEventConstant } from '@microservice/notification/constants/notification.event.constant';
+import { ServiceApiEventsConstant } from '@/microservice/api/constants/service.api.events.constant';
+import { NotificationEventConstant } from '@/microservice/notification/constants/notification.event.constant';
 
 /**
  * То какие уведомления можно отравить в очереди событий rabbitmq

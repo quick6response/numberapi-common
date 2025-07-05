@@ -1,4 +1,4 @@
-import { Organization, OrganizationType } from '@share';
+import { Organization, OrganizationType } from '@/microservice/share';
 
 // информация об организации приходящей с сервисов
 export interface OrganizationDtoInterface {

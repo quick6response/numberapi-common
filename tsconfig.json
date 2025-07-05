@@ -12,11 +12,10 @@
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "Node",
     "paths": {
-      "@share": ["./share"],
-      "@share/*": ["./share/*"],
-      
-      "@microservice": ["./microservice"],
-      "@microservice/*": ["./microservice/*"]
+      "@/microservice": ["./microservice"],
+      "@/microservice/*": ["./microservice/*"],
+      "@/database": ["./database"],
+      "@/database/*": ["./database/*"]
     }
   },
   "include": ["src", ".eslintrc.js"],

@@ -1,11 +1,11 @@
-import { MicroservicesEventConstant } from '@share';
+import { MicroservicesEventConstant } from '@/microservice/share';
 import type {
   DonutCreateDtoInterface,
   DonutExpiredDtoInterface,
   DonutPriceChangeDtoInterface,
   DonutProlongedDtoInterface,
   DonutCancelDtoInterface,
-} from '@microservice/api';
+} from '@/microservice/api';
 
 export type RabbitmqServiceApiEventsKeys =
   keyof typeof MicroservicesEventConstant.api.events;

@@ -19,8 +19,6 @@
     }
   },
   "extends": [
-    "airbnb-typescript/base",
-    "plugin:unicorn/recommended",
     "prettier",
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
@@ -38,8 +36,7 @@
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "unicorn/catch-error-name": "warn",
-    "unicorn/error-message": "warn",
-    "import/no-cycle": 2
+    "import/no-cycle": 2,
+    "import/no-named-as-default": 0
   }
 }

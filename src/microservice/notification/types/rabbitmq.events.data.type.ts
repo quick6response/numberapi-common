@@ -1,11 +1,11 @@
-import { MicroservicesEventConstant } from '@share';
+import { MicroservicesEventConstant } from '@/microservice/share';
 import {
   AuthLoginDto,
   AuthRegistrationDto,
-  CommentCreateDto,
-  CommentDeleteDto,
-  CommentEditDto,
-  CommentNumberModerateDto,
+  NumberCommentCreateDto,
+  NumberCommentDeleteDto,
+  NumberCommentEditDto,
+  NumberCommentModerateDto,
   DonutSubscriptionExpiredDtoInterface,
   DonutSubscriptionIssuanceDtoInterface,
   DonutSubscriptionProlongedDtoInterface,
@@ -26,7 +26,7 @@ import {
   UserAnotherFindNumberDtoInterface,
   UserCreateDtoInterface,
   UserUpdateDtoInterface,
-} from '@microservice/notification/dto';
+} from '@/microservice/notification/dto';
 
 export type RabbitNotificationEventsKeys =
   keyof typeof MicroservicesEventConstant.notification;
@@ -46,15 +46,15 @@ export type RabbitmqNotificationEventsDtoData = {
   /**
    * Удаление комментария пользователем
    */
-  comment_delete: CommentDeleteDto;
+  comment_delete: NumberCommentDeleteDto;
   /**
    * Создание комментария
    */
-  comment_create: CommentCreateDto;
+  comment_create: NumberCommentCreateDto;
   /**
    * Создание комментария
    */
-  comment_edit: CommentEditDto;
+  comment_edit: NumberCommentEditDto;
   /**
    * поиск номера
    */
@@ -103,7 +103,7 @@ export type RabbitmqNotificationEventsDtoData = {
   /**
    * Модерация комментария
    */
-  comment_moderation_number: CommentNumberModerateDto;
+  comment_moderation_number: NumberCommentModerateDto;
   /**
    * Обратное уведомление об успешном Оформление подписки в сервисе
    */

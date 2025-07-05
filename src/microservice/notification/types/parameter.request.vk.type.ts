@@ -1,5 +1,5 @@
-import { ClientPlatform } from '@share';
-import { ParameterRequestActionInterface } from '@microservice/notification/types/parameter.request.action.type';
+import { ClientPlatform } from '@/microservice/share';
+import { ParameterRequestActionInterface } from '@/microservice/notification/types/parameter.request.action.type';
 
 interface VKClientInfoUser {
   vk_access_token_settings: string;

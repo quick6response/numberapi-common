@@ -1,6 +1,6 @@
 {
-  "name": "@numberapi/microservices",
-  "version": "1.8.9",
+  "name": "numberapi",
+  "version": "2.0.0",
   "description": "",
   "private": true,
   "scripts": {
@@ -47,17 +47,19 @@
     "prettier": "^3.3.3"
   },
   "exports": {
-    ".": "./dist/index.js",
-    "./share": "./dist/share/index.js",
-    "./notification": "./dist/microservice/notification/index.js",
-    "./api": "./dist/microservice/api/index.js"
+    "./microservice/share": "./dist/microservice/share/index.js",
+    "./microservice/notification": "./dist/microservice/notification/index.js",
+    "./microservice/api": "./dist/microservice/api/index.js",
+    "./database": "./dist/database/index.js",
+    "./database/postgres": "./dist/database/postgres/index.js"
   },
   "typesVersions": {
     "*": {
-      "share": ["./dist/share/index.d.ts"],
-      "notification": ["./dist/microservice/notification/index.d.ts"],
-      "api": ["./dist/microservice/api/index.d.ts"],
-      "*": ["./dist/index.d.ts"]
+      "microservice/share": ["./dist/microservice/share/index.d.ts"],
+      "microservice/notification": ["./dist/microservice/notification/index.d.ts"],
+      "microservice/api": ["./dist/microservice/api/index.d.ts"],
+      "database": ["./dist/database/index.d.ts"],
+      "database/postgres": ["./dist/database/postgres/index.d.ts"]
     }
   }
 }
