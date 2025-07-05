@@ -1,12 +1,11 @@
+/** Статус поиска номера */
 export enum NumberSearchUserStatus {
   // начало поиска
-  Pending = 'pending',
-  // возникла ошибка во время поиска
-  Rejected = 'rejected',
+  PENDING = 'pending',
   // поиск успешный
-  Success = 'success',
-  // ошибка возникла до запуска поиска
-  Error = 'error',
+  SUCCESS = 'success',
+  // поиск неудачный
+  ERROR = 'error',
 }
 
 export default NumberSearchUserStatus;
