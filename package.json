@@ -1,6 +1,6 @@
 {
   "name": "numberapi",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "",
   "private": true,
   "scripts": {
@@ -53,7 +53,23 @@
     "./microservice": "./dist/microservice/index.js",
     "./database": "./dist/database/index.js",
     "./database/postgres": "./dist/database/interfaces/postgres/index.js",
-    "./database/*": "./dist/database/*"
+    "./HELP": "Это нужно чтобы верно работал проект api",
+    "./dist/database/constants/applicationVersion/applicationVersionStatus": "./dist/database/constants/applicationVersion/applicationVersionStatus.js",
+    "./dist/database/constants/applicationVersion/applicationVersionViewUserAction": "./dist/database/constants/applicationVersion/applicationVersionViewUserAction.js",
+    "./dist/database/constants/applicationVersion/index": "./dist/database/constants/applicationVersion/index.js",
+    "./dist/database/constants/file/fileFormatType": "./dist/database/constants/file/fileFormatType.js",
+    "./dist/database/constants/file/fileStorageType": "./dist/database/constants/file/fileStorageType.js",
+    "./dist/database/constants/file/index": "./dist/database/constants/file/index.js",
+    "./dist/database/constants/index": "./dist/database/constants/index.js",
+    "./dist/database/constants/number/index": "./dist/database/constants/number/index.js",
+    "./dist/database/constants/number/numberFactSource": "./dist/database/constants/number/numberFactSource.js",
+    "./dist/database/constants/number/numberFactType": "./dist/database/constants/number/numberFactType.js",
+    "./dist/database/constants/number/numberFrequencyLevel": "./dist/database/constants/number/numberFrequencyLevel.js",
+    "./dist/database/constants/number/numberSearchUserStatus": "./dist/database/constants/number/numberSearchUserStatus.js",
+    "./dist/database/constants/numberComment/index": "./dist/database/constants/numberComment/index.js",
+    "./dist/database/constants/numberComment/numberCommentStatus": "./dist/database/constants/numberComment/numberCommentStatus.js",
+    "./dist/database/constants/user/index": "./dist/database/constants/user/index.js",
+    "./dist/database/constants/user/userRole": "./dist/database/constants/user/userRole.js"
   },
   "typesVersions": {
     "*": {
@@ -62,8 +78,7 @@
       "microservice/api": ["./dist/microservice/api/index.d.ts"],
       "microservice": ["./dist/microservice/index.d.ts"],
       "database": ["./dist/database/index.d.ts"],
-      "database/postgres": ["./dist/database/interfaces/postgres/index.d.ts"],
-      "database/*": ["./dist/database/*"]
+      "database/postgres": ["./dist/database/interfaces/postgres/index.d.ts"]
     }
   }
 }
