@@ -1,7 +1,7 @@
-export interface NumbersSearchUsersHistory {
+export interface UsersSearchNumbersHistory {
   id: number;
-  agent: string;
-  ip: string;
+  userAgent: string | null;
+  ip: string | null;
   operatorId: number;
   numberId: number;
   userId: number;

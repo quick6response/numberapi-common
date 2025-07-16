@@ -12,7 +12,7 @@ export * from './numbersHistoryOperators';
 export * from './numbersInfo';
 export * from './numbersInfoPhoto';
 export * from './numbersParseFails';
-export * from './numbersSearchUsersHistory';
+export * from './usersSearchNumbersHistory';
 export * from './numbersSearchUsers';
 export * from './numbersOrganizations';
 export * from './numbersSocials';
