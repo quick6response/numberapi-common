@@ -1,4 +1,4 @@
-export interface UsersNumberBonusesForAdViews {
+export interface UsersBonusesSearchNumbersForAdViews {
   id: number;
   // полезная нагрузка
   payload: string | null;

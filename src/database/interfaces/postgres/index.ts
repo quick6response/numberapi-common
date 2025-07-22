@@ -20,5 +20,5 @@ export * from './operators';
 export * from './organizations';
 export * from './organizationsTypes';
 export * from './users';
-export * from './usersNumberBonusesForAdViews';
+export * from './usersBonusesSearchNumbersForAdViews';
 export * from './usersNumbers';
