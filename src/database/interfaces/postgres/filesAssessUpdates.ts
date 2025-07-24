@@ -1,5 +1,6 @@
 import { FileFormatType, FileStorageType } from '../../constants';
 
+/** Таблица с разрешением на загрузку файлов */
 export interface FilesAssessUpdates {
   id: number;
   hash: string;

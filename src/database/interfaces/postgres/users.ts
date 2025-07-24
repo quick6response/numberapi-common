@@ -1,5 +1,6 @@
 import { UserRole } from '../../constants';
 
+/** Таблица пользователей */
 export interface Users {
   id: number;
   idVk: number;

@@ -1,3 +1,4 @@
+/** Таблица найденных социальных упоминаний в сети к номеру */
 export interface NumbersSocials {
   id: number;
   numberId: number;

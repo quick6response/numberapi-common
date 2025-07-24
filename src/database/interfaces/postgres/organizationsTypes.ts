@@ -1,3 +1,4 @@
+/** Таблица типов организаций */
 export interface OrganizationsTypes {
   id: number;
   name: string;

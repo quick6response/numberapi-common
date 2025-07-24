@@ -1,3 +1,4 @@
+/** Таблица информации о номерах */
 export interface NumbersInfo {
   id: number;
   iconId: number;

@@ -1,5 +1,6 @@
 import { FileFormatType, FileStorageType } from '../../constants';
 
+/** Таблица с файлами */
 export interface Files {
   id: number;
   hash: string;

@@ -1,3 +1,4 @@
+/** Таблица истории операторов номеров */
 export interface NumbersHistoryOperators {
   id: number;
   numberId: number;

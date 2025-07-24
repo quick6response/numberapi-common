@@ -1,3 +1,4 @@
+/** Таблица номеров пользователей */
 export interface UsersNumbers {
   id: number;
   numberId: number;

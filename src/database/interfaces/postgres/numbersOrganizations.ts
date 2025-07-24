@@ -1,3 +1,4 @@
+/** Таблица номеров организаций */
 export interface NumbersOrganizations {
   id: number;
   organizationId: number;

@@ -1,3 +1,4 @@
+/** Таблица бонусов за просмотр рекламы */
 export interface UsersBonusesSearchNumbersForAdViews {
   id: number;
   // полезная нагрузка

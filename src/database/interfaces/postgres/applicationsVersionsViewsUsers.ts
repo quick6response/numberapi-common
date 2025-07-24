@@ -1,6 +1,6 @@
 import { ApplicationVersionViewUserAction } from '../../constants';
 
-/** Пользователи просмотра версии приложения */
+/** Таблица просмотров версий приложения пользователями */
 export interface ApplicationsVersionsViewsUsers {
   id: number;
   userId: number;

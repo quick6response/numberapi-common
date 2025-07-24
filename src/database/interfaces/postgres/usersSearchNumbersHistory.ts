@@ -1,3 +1,4 @@
+/** Таблица истории поиска номеров */
 export interface UsersSearchNumbersHistory {
   id: number;
   userAgent: string | null;

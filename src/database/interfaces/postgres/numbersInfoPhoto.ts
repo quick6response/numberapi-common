@@ -1,3 +1,4 @@
+/** Таблица с фотографиями информации о номерах */
 export interface NumbersInfoPhoto {
   id: number;
   name: string;

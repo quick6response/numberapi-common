@@ -1,3 +1,4 @@
+/** Таблица фактов звонков */
 export interface NumbersFactsCalls {
   numberId: number;
   userId: number;

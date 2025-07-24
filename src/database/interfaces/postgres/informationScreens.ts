@@ -1,3 +1,4 @@
+/** Таблица с информационными экранами для слайдов */
 export interface InformationScreens {
   id: number;
   title: string;

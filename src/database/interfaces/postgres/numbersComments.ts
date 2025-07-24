@@ -1,5 +1,6 @@
 import { NumberCommentStatus } from '../../constants';
 
+/** Таблица комментариев к номерам */
 export interface NumbersComments {
   id: number;
   text: string;
