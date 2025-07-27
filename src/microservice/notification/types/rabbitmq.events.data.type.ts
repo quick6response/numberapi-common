@@ -64,7 +64,7 @@ export type RabbitmqNotificationEventsDtoData = {
   /**
    * Модерация комментария
    */
-  [NotificationEventConstant.number_comment_moderation_number]: NumberCommentModeratedDto;
+  [NotificationEventConstant.number_comment_moderation]: NumberCommentModeratedDto;
 
   /**
    * поиск номера

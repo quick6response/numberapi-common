@@ -27,7 +27,7 @@ export const NotificationEventConstant = {
   /**
    * Модерация комментария
    */
-  number_comment_moderation_number: 'number_comment_moderation_number',
+  number_comment_moderation: 'number_comment_moderation',
 
   /**
    * поиск номера
