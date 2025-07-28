@@ -1,5 +1,5 @@
 {
-  "name": "numberapi",
+  "name": "numberapi-common",
   "version": "2.0.1",
   "description": "",
   "private": true,
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/quick6response/number_api_event.git"
+    "url": "git+https://github.com/quick6response/numberapi-common.git"
   },
   "keywords": [
     "typescript",
