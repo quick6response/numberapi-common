@@ -15,6 +15,7 @@
       "@/microservice": ["./microservice"],
       "@/microservice/*": ["./microservice/*"],
       "@/database": ["./database"],
+      "@/database/postgres": ["./database/interfaces/postgres"],
       "@/database/*": ["./database/*"]
     }
   },

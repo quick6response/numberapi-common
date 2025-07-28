@@ -1,9 +1,11 @@
+import { Operators } from '@/database/postgres';
+
 export interface OperatorNumber {
-  id: number;
-  name: string;
-  description: string | null;
-  foundingDate: Date | null;
-  photo: string | null;
-  createdAt: Date;
-  updatedAt: Date;
+  id: Operators['id'];
+  name: Operators['name'];
+  description: Operators['description'];
+  foundingDate: number | null;
+  photo: Operators['photo'];
+  createdAt: number;
+  updatedAt: number;
 }

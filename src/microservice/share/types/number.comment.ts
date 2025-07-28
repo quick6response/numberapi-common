@@ -1,12 +1,12 @@
-import { NumberCommentStatus } from '../../../database/constants';
+import { NumbersComments } from '@/database/postgres';
 
 export interface NumberComment {
-  id: number;
-  numberId: number;
-  userId: number;
-  text: string;
-  isAnon: boolean;
-  status: NumberCommentStatus;
+  id: NumbersComments['id'];
+  numberId: NumbersComments['numberId'];
+  userId: NumbersComments['userId'];
+  text: NumbersComments['text'];
+  isAnon: NumbersComments['isAnon'];
+  status: NumbersComments['status'];
   createdAt: number;
   updatedAt: number;
 }

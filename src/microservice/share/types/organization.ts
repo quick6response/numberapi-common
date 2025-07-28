@@ -1,21 +1,23 @@
+import { Organizations, OrganizationsTypes } from '@/database/postgres';
+
 export interface Organization {
-  id: number;
-  name: string;
-  site: string | null;
-  description: string | null;
-  typeId: number | null;
-  type: OrganizationType | null;
-  photo: string | null;
-  createdAt: Date;
-  updatedAt: Date;
+  id: Organizations['id'];
+  name: Organizations['name'];
+  site: Organizations['site'];
+  description: Organizations['description'];
+  typeId: Organizations['typeId'];
+  type: OrganizationType;
+  photo: Organizations['photo'];
+  createdAt: number;
+  updatedAt: number;
 }
 
 export interface OrganizationType {
-  id: number;
-  name: string;
-  nameEn: string;
-  nameShort: string | null;
-  nameShortEn: string | null;
-  createdAt: Date;
-  updatedAt: Date;
+  id: OrganizationsTypes['id'];
+  name: OrganizationsTypes['name'];
+  nameEn: OrganizationsTypes['nameEn'];
+  nameShort: OrganizationsTypes['nameShort'];
+  nameShortEn: OrganizationsTypes['nameShortEn'];
+  createdAt: number;
+  updatedAt: number;
 }

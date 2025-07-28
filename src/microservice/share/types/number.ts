@@ -1,6 +1,8 @@
+import { Numbers } from '@/database/postgres';
+
 export interface NumberEssence {
-  id: number;
-  number: string;
-  createdAt: Date;
-  updatedAt: Date;
+  id: Numbers['id'];
+  number: Numbers['number'];
+  createdAt: number;
+  updatedAt: number;
 }
