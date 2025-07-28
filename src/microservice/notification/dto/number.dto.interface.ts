@@ -1,8 +1,8 @@
 import type {
   OrganizationDtoInterface,
   ParameterClientInfoActionEventAllPlatformInterface,
-} from '@microservice/notification';
-import type { NumberEssence, User } from '@share/types';
+} from '@/microservice/notification';
+import type { NumberEssence, User } from '@/microservice/share/types';
 
 export enum StatusFindNumber {
   UPDATE = 'update',

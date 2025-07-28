@@ -1,4 +1,4 @@
-import { ClientPlatform, User } from '@share';
+import { ClientPlatform, User } from '@/microservice/share';
 
 /**
  * Данные о пользователе приходящие с сервиса АПИ после действия

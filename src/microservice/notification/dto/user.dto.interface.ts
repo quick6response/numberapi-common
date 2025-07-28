@@ -1,4 +1,4 @@
-import type { UserVk, User } from '@share/types';
+import type { UserVk, User } from '@/microservice/share/types';
 
 export interface UserDtoInterface extends User {}
 

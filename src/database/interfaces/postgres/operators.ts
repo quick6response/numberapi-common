@@ -1,9 +1,11 @@
-export interface OperatorNumber {
+/** Таблица операторов */
+export interface Operators {
   id: number;
   name: string;
+  photo: string | null;
   description: string | null;
   foundingDate: Date | null;
-  photo: string | null;
+  integrationId: number | null;
   createdAt: Date;
   updatedAt: Date;
 }

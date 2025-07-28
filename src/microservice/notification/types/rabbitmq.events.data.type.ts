@@ -1,11 +1,12 @@
-import { MicroservicesEventConstant } from '@share';
+import { NotificationEventConstant } from '@/microservice/notification';
+import { MicroservicesEventConstant } from '@/microservice/share';
 import {
   AuthLoginDto,
   AuthRegistrationDto,
-  CommentCreateDto,
-  CommentDeleteDto,
-  CommentEditDto,
-  CommentNumberModerateDto,
+  NumberCommentCreatedDto,
+  NumberCommentDeletedDto,
+  NumberCommentEditedDto,
+  NumberCommentModeratedDto,
   DonutSubscriptionExpiredDtoInterface,
   DonutSubscriptionIssuanceDtoInterface,
   DonutSubscriptionProlongedDtoInterface,
@@ -26,7 +27,7 @@ import {
   UserAnotherFindNumberDtoInterface,
   UserCreateDtoInterface,
   UserUpdateDtoInterface,
-} from '@microservice/notification/dto';
+} from '@/microservice/notification/dto';
 
 export type RabbitNotificationEventsKeys =
   keyof typeof MicroservicesEventConstant.notification;
@@ -38,123 +39,143 @@ export type RabbitmqNotificationEventsDtoData = {
   /**
    * Авторизация пользователя в ВК
    */
-  auth_login_user: AuthLoginDto;
+  [NotificationEventConstant.auth_login_user]: AuthLoginDto;
+
   /**
    * Регистрация пользователя ВК
    */
-  auth_register_user: AuthRegistrationDto;
+  [NotificationEventConstant.auth_register_user]: AuthRegistrationDto;
+
   /**
    * Удаление комментария пользователем
    */
-  comment_delete: CommentDeleteDto;
+  [NotificationEventConstant.number_comment_delete]: NumberCommentDeletedDto;
+
   /**
    * Создание комментария
    */
-  comment_create: CommentCreateDto;
+  [NotificationEventConstant.number_comment_create]: NumberCommentCreatedDto;
+
   /**
    * Создание комментария
    */
-  comment_edit: CommentEditDto;
+  [NotificationEventConstant.number_comment_edit]: NumberCommentEditedDto;
+
+  /**
+   * Модерация комментария
+   */
+  [NotificationEventConstant.number_comment_moderation]: NumberCommentModeratedDto;
+
   /**
    * поиск номера
    */
-  number_find: NumberFindDto;
+  [NotificationEventConstant.number_find]: NumberFindDto;
+
   /**
    * Ошибка поиск номера.
    */
-  number_find_error: NumberFindErrorDto;
+  [NotificationEventConstant.number_find_error]: NumberFindErrorDto;
+
   /**
    * Создание нового оператора автоматически системой в процессе поиска номеров
    */
-  operator_create_auto: OperatorCreateDtoInterface;
+  [NotificationEventConstant.operator_create_auto]: OperatorCreateDtoInterface;
+
   /**
    * Поиск номера телефона пользователя с привязанными номером и активированными уведомлениями
    */
-  user_another_number_find: UserAnotherFindNumberDtoInterface;
+  [NotificationEventConstant.user_another_number_find]: UserAnotherFindNumberDtoInterface;
 
   /**
    * Добавление организации
    */
-  organization_create_system: OrganizationCreateDtoInterface;
+  [NotificationEventConstant.organization_create_system]: OrganizationCreateDtoInterface;
+
   /**
    * Обновление информации об организации
    */
-  organization_update_system: OrganizationUpdateDtoInterface;
+  [NotificationEventConstant.organization_update_system]: OrganizationUpdateDtoInterface;
+
   /**
    * Добавление организации
    */
-  organization_create_system_error: OrganizationCreateErrorDtoInterface;
+  [NotificationEventConstant.organization_create_system_error]: OrganizationCreateErrorDtoInterface;
+
   /**
    * Обновление организации
    */
-  organization_update_error: OrganizationUpdateErrorDtoInterface;
+  [NotificationEventConstant.organization_update_error]: OrganizationUpdateErrorDtoInterface;
+
   /**
    * Прикрепление организации к номеру
    */
-  number_organization_pin: NumberOrganizationPinDto;
+  [NotificationEventConstant.number_organization_pin]: NumberOrganizationPinDto;
+
   /**
    * Запуск сервиса АПИ
    */
-  service_api_start: { date: number };
+  [NotificationEventConstant.service_api_start]: { date: number };
+
   /**
    * Остановка сервиса АПИ
    */
-  service_api_stop: { date: number; signal: string };
-  /**
-   * Модерация комментария
-   */
-  comment_moderation_number: CommentNumberModerateDto;
+  [NotificationEventConstant.service_api_stop]: {
+    date: number;
+    signal: string;
+  };
+
   /**
    * Обратное уведомление об успешном Оформление подписки в сервисе
    */
-  donut_subscriptionIssuance: DonutSubscriptionIssuanceDtoInterface;
+  [NotificationEventConstant.donut_subscriptionIssuance]: DonutSubscriptionIssuanceDtoInterface;
+
   /**
    * Уведомление об успешном Продление подписки
    */
-  donut_subscriptionProlonged: DonutSubscriptionProlongedDtoInterface;
+  [NotificationEventConstant.donut_subscriptionProlonged]: DonutSubscriptionProlongedDtoInterface;
 
   /**
    * Уведомление о выключение подписки
    */
-  donut_subscriptionExpired: DonutSubscriptionExpiredDtoInterface;
+  [NotificationEventConstant.donut_subscriptionExpired]: DonutSubscriptionExpiredDtoInterface;
 
   /**
    * Создание пользователя в системе автоматически
    */
-  user_create: UserCreateDtoInterface;
+  [NotificationEventConstant.user_create]: UserCreateDtoInterface;
 
   /**
    * Изменение пользователя
    */
-  user_edit: UserUpdateDtoInterface;
+  [NotificationEventConstant.user_edit]: UserUpdateDtoInterface;
 
   /**
    * Привязка оператора к оператору из системы интеграции
    */
-  operator_bind_integration: OperatorBindIntegrationDtoInterface;
+  [NotificationEventConstant.operator_bind_integration]: OperatorBindIntegrationDtoInterface;
 
   /**
    * Крон задача успешно завершила обновление номера
    */
-  number_schedule_updated_success: NumberScheduleUpdatedSuccessDto;
+  [NotificationEventConstant.number_schedule_updated_success]: NumberScheduleUpdatedSuccessDto;
 
   /**
    * Крон задача обновление номера завершилась с ошибкой
    */
-  number_schedule_updated_error: NumberScheduleUpdatedErrorDto;
+  [NotificationEventConstant.number_schedule_updated_error]: NumberScheduleUpdatedErrorDto;
 
   /**
    * Крон задача обновления номеров завершена
    */
-  number_schedule_updated_summary: NumberScheduleUpdatedSummaryDto;
+  [NotificationEventConstant.number_schedule_updated_summary]: NumberScheduleUpdatedSummaryDto;
 
   /**
    * Крон задача успешно завершила добавление номера
    */
-  number_schedule_created_success: NumberScheduleCreatedSuccessDto;
+  [NotificationEventConstant.number_schedule_created_success]: NumberScheduleCreatedSuccessDto;
 
   /**
    * Крон задача добавления номера завершилась с ошибкой
    */
-  number_schedule_created_error: NumberScheduleCreatedErrorDto;
+  [NotificationEventConstant.number_schedule_created_error]: NumberScheduleCreatedErrorDto;
 };

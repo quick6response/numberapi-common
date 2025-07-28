@@ -3,6 +3,7 @@ export const NotificationEventConstant = {
    * Авторизация пользователя в ВК
    */
   auth_login_user: 'auth_login_user',
+
   /**
    * Регистрация пользователя ВК
    */
@@ -11,17 +12,22 @@ export const NotificationEventConstant = {
   /**
    * Удаление комментария пользователем
    */
-  comment_delete: 'comment_delete',
+  number_comment_delete: 'number_comment_delete',
 
   /**
    * Создание комментария
    */
-  comment_create: 'comment_create',
+  number_comment_create: 'number_comment_create',
 
   /**
    * Изменение комментария
    */
-  comment_edit: 'comment_edit',
+  number_comment_edit: 'number_comment_edit',
+
+  /**
+   * Модерация комментария
+   */
+  number_comment_moderation: 'number_comment_moderation',
 
   /**
    * поиск номера
@@ -47,6 +53,7 @@ export const NotificationEventConstant = {
    * Добавление организации
    */
   organization_create_system: 'organization_create_system',
+
   /**
    * Обновление информации об организации
    */
@@ -72,15 +79,11 @@ export const NotificationEventConstant = {
    * Запуск сервиса АПИ
    */
   service_api_start: 'service_api_start',
+
   /**
    * Остановка сервиса АПИ
    */
   service_api_stop: 'service_api_stop',
-
-  /**
-   * Модерация комментария
-   */
-  comment_moderation_number: 'comment_moderation_number',
 
   /**
    * Обратное уведомление об успешном Оформление подписки в сервисе

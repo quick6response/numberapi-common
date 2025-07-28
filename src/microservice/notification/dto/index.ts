@@ -1,5 +1,5 @@
 export * from './auth.dto.interface';
-export * from './comment.dto.interface';
+export * from './number.comment.dto.interface';
 export * from './donut.dto.interface';
 export * from './operator.dto.interface';
 export * from './number.dto.interface';

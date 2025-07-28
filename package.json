@@ -1,10 +1,10 @@
 {
-  "name": "@numberapi/microservices",
-  "version": "1.8.9",
+  "name": "numberapi-common",
+  "version": "2.0.1",
   "description": "",
   "private": true,
   "scripts": {
-    "build": "rm -rf dist && tsc && tsc -p tsconfig.types.json && cp package.json dist/package.json && tsc-alias -v --dir dist -p tsconfig.json",
+    "build": "rm -rf dist && tsc && tsc -p tsconfig.types.json && tsc-alias -v --dir dist -p tsconfig.json",
     "ts-alias": "tsc-alias -v --dir dist -p tsconfig.json",
     "build-interfaces": "tsc --emitDeclarationOnly",
     "prepare": "npm run build",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/quick6response/number_api_event.git"
+    "url": "git+https://github.com/quick6response/numberapi-common.git"
   },
   "keywords": [
     "typescript",
@@ -34,30 +34,48 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "@types/node": "^20.16.11",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "8.56.0",
-    "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-unicorn": "^51.0.1",
     "prettier": "^3.3.3"
   },
   "exports": {
-    ".": "./dist/index.js",
-    "./share": "./dist/share/index.js",
-    "./notification": "./dist/microservice/notification/index.js",
-    "./api": "./dist/microservice/api/index.js"
+    "./microservice/share": "./dist/microservice/share/index.js",
+    "./microservice/notification": "./dist/microservice/notification/index.js",
+    "./microservice/api": "./dist/microservice/api/index.js",
+    "./microservice": "./dist/microservice/index.js",
+    "./database": "./dist/database/index.js",
+    "./database/postgres": "./dist/database/interfaces/postgres/index.js",
+    "./HELP": "Это нужно чтобы верно работал проект api",
+    "./dist/database/constants/applicationVersion/applicationVersionStatus": "./dist/database/constants/applicationVersion/applicationVersionStatus.js",
+    "./dist/database/constants/applicationVersion/applicationVersionViewUserAction": "./dist/database/constants/applicationVersion/applicationVersionViewUserAction.js",
+    "./dist/database/constants/applicationVersion/index": "./dist/database/constants/applicationVersion/index.js",
+    "./dist/database/constants/file/fileFormatType": "./dist/database/constants/file/fileFormatType.js",
+    "./dist/database/constants/file/fileStorageType": "./dist/database/constants/file/fileStorageType.js",
+    "./dist/database/constants/file/index": "./dist/database/constants/file/index.js",
+    "./dist/database/constants/index": "./dist/database/constants/index.js",
+    "./dist/database/constants/number/index": "./dist/database/constants/number/index.js",
+    "./dist/database/constants/number/numberFactSource": "./dist/database/constants/number/numberFactSource.js",
+    "./dist/database/constants/number/numberFactType": "./dist/database/constants/number/numberFactType.js",
+    "./dist/database/constants/number/numberFrequencyLevel": "./dist/database/constants/number/numberFrequencyLevel.js",
+    "./dist/database/constants/number/numberSearchUserStatus": "./dist/database/constants/number/numberSearchUserStatus.js",
+    "./dist/database/constants/numberComment/index": "./dist/database/constants/numberComment/index.js",
+    "./dist/database/constants/numberComment/numberCommentStatus": "./dist/database/constants/numberComment/numberCommentStatus.js",
+    "./dist/database/constants/user/index": "./dist/database/constants/user/index.js",
+    "./dist/database/constants/user/userRole": "./dist/database/constants/user/userRole.js"
   },
   "typesVersions": {
     "*": {
-      "share": ["./dist/share/index.d.ts"],
-      "notification": ["./dist/microservice/notification/index.d.ts"],
-      "api": ["./dist/microservice/api/index.d.ts"],
-      "*": ["./dist/index.d.ts"]
+      "microservice/share": ["./dist/microservice/share/index.d.ts"],
+      "microservice/notification": ["./dist/microservice/notification/index.d.ts"],
+      "microservice/api": ["./dist/microservice/api/index.d.ts"],
+      "microservice": ["./dist/microservice/index.d.ts"],
+      "database": ["./dist/database/index.d.ts"],
+      "database/postgres": ["./dist/database/interfaces/postgres/index.d.ts"]
     }
   }
 }

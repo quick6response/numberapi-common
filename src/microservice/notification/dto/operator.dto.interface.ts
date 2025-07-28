@@ -1,4 +1,4 @@
-import { OperatorNumber } from '@share';
+import { OperatorNumber } from '@/microservice/share';
 
 export interface OperatorCreateDtoInterface {
   date: number;
