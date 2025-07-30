@@ -4,7 +4,7 @@ import { NumberCommentStatus } from '../../constants';
 export interface NumbersComments {
   id: number;
   text: string;
-  ip: string;
+  ip: string | null;
   status: NumberCommentStatus;
   isAnon: boolean;
   userId: number;
