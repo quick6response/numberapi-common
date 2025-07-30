@@ -4,7 +4,7 @@ export interface UsersBonusesSearchNumbersForAdViews {
   // полезная нагрузка
   payload: string | null;
   hash: string;
-  ip: string;
+  ip: string | null;
   userAgent: string;
   userId: number;
   // доступность бонуса к использованию

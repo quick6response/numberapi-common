@@ -3,7 +3,7 @@ import { NumberSearchUserStatus } from '../../constants';
 /** Таблица пользователей, которые ищут номера */
 export interface NumbersSearchUsers {
   id: string;
-  ip: string;
+  ip: string | null;
   userAgent: string;
   userId: number;
   // искомый номер
